@@ -1,0 +1,30 @@
+{
+    
+    "meta" : {
+        "status" : 1,
+        "message" : "some error message if any"
+    },
+    "data" : {
+        
+        "goals_count" :2 ,
+        "next_url" : "http://someurl",
+        "goals" : [
+                   {
+                   "g_title" : "fist goal",
+                   "g_user" : "kanchan",
+                   "g_img_url": "https://unsplash.com/?photo=HpiYsNBORAw",
+                   "g_user_imgUrl" : "http://findicons.com/files/icons/861/tweet_my_web/128/single_bird.png",
+                   "g_todo_count" : 50,
+                   "g_done_count" : 10
+                   },
+                   {
+                   "g_title" : "second goal",
+                   "g_user" : "joker",
+                   "g_img_url" : "https://unsplash.com/?photo=lzYZEDJ8fbo",
+                   "g_user_imgUrl" : "http://findicons.com/files/icons/861/tweet_my_web/128/single_bird.png",
+                   "g_todo_count" : 60,
+                   "g_done_count" : 103        
+                   }
+                   ]
+    }
+}
