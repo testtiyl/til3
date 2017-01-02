@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
 }
 
@@ -56,6 +56,13 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         
         let cell:HomeTableViewCell  = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HomeTableViewCell
         cell.goalTitleLbl.text = "goal test text"
+        cell.userImageView.image = #imageLiteral(resourceName: "user_male")
+        
+        let path: String? = Bundle.main.path(forResource: "goal_image", ofType: "jpg", inDirectory: "DirectoryName/Images")
+        let imageFromPath = UIImage(contentsOfFile: path!)!
+        cell.goalImageView.image = imageFromPath
+        
+        
         return cell
         
     }
