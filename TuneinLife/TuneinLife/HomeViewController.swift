@@ -62,7 +62,6 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         let imageFromPath = UIImage(contentsOfFile: path!)!
         cell.goalImageView.image = imageFromPath
         
-        
         return cell
         
     }

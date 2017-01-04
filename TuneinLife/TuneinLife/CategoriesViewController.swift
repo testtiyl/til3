@@ -10,15 +10,27 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    
+    @IBOutlet weak var selectedCategory: UILabel!
+    @IBOutlet var categoryBtn: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for  btn in categoryBtn {
+            
+            btn.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+        }
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func categoryBtnTapped(_ sender: UIButton) {
+        
+        let currentBtnCat = sender.currentTitle
+        let displayText = selectedCategory.text
+        selectedCategory.text = displayText! + "\n" + currentBtnCat!
+        
     }
     
 }
