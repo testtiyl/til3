@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HomeTableViewCell" id="iN0-l3-epB" customClass="HomeTableViewCell" customModule="til2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="361"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hds-E2-lhE">
+                    <rect key="frame" x="10" y="5" width="360" height="318"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gt-HR-KMR">
+                    <rect key="frame" x="47" y="322.5" width="323" height="18.5"/>
+                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODO: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-8y-gpi">
+                    <rect key="frame" x="273" y="264" width="86" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4z-7M-c9k">
+                    <rect key="frame" x="164" y="264" width="86" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZQh-Hd-zMC">
+                    <rect key="frame" x="10" y="322" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="N4Y-Nu-hfR"/>
+                        <constraint firstAttribute="width" constant="36" id="R7s-rR-3yg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Gt-HR-KMR" firstAttribute="trailing" secondItem="Hds-E2-lhE" secondAttribute="trailing" id="4w4-id-H1E"/>
+                <constraint firstItem="ZQh-Hd-zMC" firstAttribute="top" secondItem="Hds-E2-lhE" secondAttribute="bottom" constant="-1" id="8VP-e7-gqg"/>
+                <constraint firstAttribute="bottom" secondItem="4Gt-HR-KMR" secondAttribute="bottom" constant="20" id="GD6-7f-ybv"/>
+                <constraint firstItem="4Gt-HR-KMR" firstAttribute="leading" secondItem="ZQh-Hd-zMC" secondAttribute="trailing" constant="1" id="LSb-yM-MSP"/>
+                <constraint firstItem="4Gt-HR-KMR" firstAttribute="top" secondItem="ZQh-Hd-zMC" secondAttribute="top" id="kGh-Bi-hpZ"/>
+                <constraint firstItem="Hds-E2-lhE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="kNi-qO-raw"/>
+                <constraint firstItem="ZQh-Hd-zMC" firstAttribute="leading" secondItem="Hds-E2-lhE" secondAttribute="leading" id="neg-za-Sh5"/>
+                <constraint firstAttribute="trailing" secondItem="Hds-E2-lhE" secondAttribute="trailing" constant="5" id="nyZ-vT-dgG"/>
+                <constraint firstItem="Hds-E2-lhE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ysr-Wb-0gf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="doneLbl" destination="Y4z-7M-c9k" id="r3E-BH-9hu"/>
+                <outlet property="goalImageView" destination="Hds-E2-lhE" id="3xZ-xc-Ud2"/>
+                <outlet property="goalTitleLbl" destination="4Gt-HR-KMR" id="Alo-El-dWN"/>
+                <outlet property="todoLbl" destination="3p7-8y-gpi" id="Cyx-jT-1VG"/>
+                <outlet property="userImageView" destination="ZQh-Hd-zMC" id="Cyb-HV-qA7"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="69"/>
+        </view>
+    </objects>
+</document>
