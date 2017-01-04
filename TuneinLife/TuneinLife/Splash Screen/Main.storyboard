@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crownit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashlogo_splash" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-dm-h7e">
+                                <rect key="frame" x="138" y="234" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="8K2-Nh-Fqt"/>
+                                    <constraint firstAttribute="width" constant="100" id="d4t-Iv-f5s"/>
+                                    <constraint firstAttribute="height" constant="100" id="rfY-eb-XHE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="yp3-E2-Yzr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown_it_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Spo-XJ-Q7C">
+                                <rect key="frame" x="82" y="358" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="0KD-e5-KZO"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Cf7-08-Gxi"/>
+                                    <constraint firstAttribute="height" constant="50" id="WcR-nX-yRi"/>
+                                    <constraint firstAttribute="width" constant="210" id="Wdq-8q-nx7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y0d-dm-h7e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cw2-be-pW6"/>
+                            <constraint firstItem="Spo-XJ-Q7C" firstAttribute="centerX" secondItem="y0d-dm-h7e" secondAttribute="centerX" id="DJh-dE-eOY"/>
+                            <constraint firstItem="y0d-dm-h7e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="O61-37-u74"/>
+                            <constraint firstItem="Spo-XJ-Q7C" firstAttribute="top" secondItem="y0d-dm-h7e" secondAttribute="bottom" constant="25" id="smC-xr-oO0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="crown_it_splash" width="256" height="61"/>
+        <image name="splashlogo_splash" width="200" height="200"/>
+    </resources>
+</document>

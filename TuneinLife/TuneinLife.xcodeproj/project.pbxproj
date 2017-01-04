@@ -17,7 +17,6 @@
 		0C4209201E1ABD4500BB220D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4209181E1ABD4500BB220D /* HomeViewController.swift */; };
 		0C4482B91E1AC59E0013FD07 /* goal_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C4482B81E1AC59E0013FD07 /* goal_image.jpg */; };
 		0C93D7141E1AAB93001E2B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93D7131E1AAB93001E2B7A /* AppDelegate.swift */; };
-		0C93D7161E1AAB93001E2B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93D7151E1AAB93001E2B7A /* ViewController.swift */; };
 		0C93D7191E1AAB93001E2B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C93D7171E1AAB93001E2B7A /* Main.storyboard */; };
 		0C93D71B1E1AAB93001E2B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93D71A1E1AAB93001E2B7A /* Assets.xcassets */; };
 		0C93D71E1E1AAB93001E2B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C93D71C1E1AAB93001E2B7A /* LaunchScreen.storyboard */; };
@@ -55,7 +54,6 @@
 		0C4482B81E1AC59E0013FD07 /* goal_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goal_image.jpg; sourceTree = "<group>"; };
 		0C93D7101E1AAB93001E2B7A /* TuneinLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuneinLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93D7131E1AAB93001E2B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C93D7151E1AAB93001E2B7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C93D7181E1AAB93001E2B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C93D71A1E1AAB93001E2B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C93D71D1E1AAB93001E2B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				0C4209181E1ABD4500BB220D /* HomeViewController.swift */,
 				0C4209111E1ABD4500BB220D /* CategoriesViewController.swift */,
-				0C93D7151E1AAB93001E2B7A /* ViewController.swift */,
 				0C4209151E1ABD4500BB220D /* GoalsViewController.swift */,
 			);
 			name = Controllers;
@@ -506,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C42091B1E1ABD4500BB220D /* Goal.swift in Sources */,
-				0C93D7161E1AAB93001E2B7A /* ViewController.swift in Sources */,
 				0C42091E1E1ABD4500BB220D /* HomeTableViewCell.swift in Sources */,
 				0C4209201E1ABD4500BB220D /* HomeViewController.swift in Sources */,
 				0C93D7141E1AAB93001E2B7A /* AppDelegate.swift in Sources */,
@@ -669,7 +665,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shyatoria.TuneinLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -683,7 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shyatoria.TuneinLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
