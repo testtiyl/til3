@@ -19,7 +19,7 @@ enum WebviewType:Int {
 
 class FBWebViewController: UIViewController, UIWebViewDelegate {
     
-    let FBClientId = "588067294623288  0"
+    let FBClientId = "287502424977296"
 
     @IBOutlet var webview: UIWebView!
 
@@ -58,10 +58,10 @@ class FBWebViewController: UIViewController, UIWebViewDelegate {
         
         let permissions = getPermissions()
         
-        var urlStr = "https://www.facebook.com/dialog/oauth?client_id=\(FBClientId)&display=popup&response_type=token&scope=\(permissions)&redirect_uri=http://blog.TIL.in"
+        var urlStr = "https://www.facebook.com/dialog/oauth?client_id=\(FBClientId)&display=popup&response_type=token&scope=\(permissions)&redirect_uri=http://tuneinlife.com"
         
         if webviewType == .Share {
-            urlStr = "https://www.facebook.com/dialog/share?app_id=\(FBClientId)&display=popup&href=\(shareUrl)&redirect_uri=http://blog.TIL.in&quote=\(shareText)"
+            urlStr = "https://www.facebook.com/dialog/share?app_id=\(FBClientId)&display=popup&href=\(shareUrl)&redirect_uri=http://tuneinlife.com&quote=\(shareText)"
         }
         
         urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
