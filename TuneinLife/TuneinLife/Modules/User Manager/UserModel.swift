@@ -1,13 +1,15 @@
 //
 //  UserModel.swift
-//  Crownit
+//  til2
 //
 //  Created by hitesh on 01/01/17.
-//  Copyright © 2017 GoldVip Technology Solutions Pvt. Ldt. All rights reserved.
+//  Copyright © 2017 Hitesh Kumar. Ldt. All rights reserved.
 //
 
 import UIKit
-import ObjectMapper
+//import ObjectMapper
+
+/*
 
 class UserModel: BaseDataModel {
     
@@ -19,7 +21,7 @@ class UserModel: BaseDataModel {
     var firstName:String?
     var lastName:String?
 
-    var gender:CrownItUserGender = .None
+    var gender:TILUserGender = .None
     var fbFriendCount = 0
 
     var userId:String?
@@ -35,7 +37,7 @@ class UserModel: BaseDataModel {
     //SettingModel
     var canShowCheckinDateTime = false
     var allowMultiLevelMarketing = false
-    var userType:CrownItUserType = .None
+    var userType:TILUserType = .None
     var checkinOtpHandshake = false
     
     var isNewUser = false
@@ -58,14 +60,14 @@ class UserModel: BaseDataModel {
     var revenueTransactions = 0
     var lifetimeTickets = 0
 //Prince
-//    var crownitFriendsArray:Array<>
+//    var TILFriendsArray:Array<>
     var alternateEmail:String?
     var linkedAccounts:NSArray?
     var deviceToken:String?
     var olaAccessToken:String?
 //    var userSignupdate:String?
     var userSignupMonth:String?
-    var crownItFriend:String?
+    var TILFriend:String?
 
     //ReferrerModel
     var isReferrerAdded = false
@@ -132,260 +134,6 @@ class UserModel: BaseDataModel {
         }
     }
     
-    func verifyContactUpdate(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        let requestParameters:[String: Any] = ["otp": self.otp ?? ""]
-        let urlParameters:[String: Any] = ["[userId]": self.userId ?? ""]
-
-        DataFactory.getData(.verifyPrimaryNumberOTP, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    
-    func userDataAndSettings(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        
-        DataFactory.getData(.userDataAndSettings, requestParams:nil, urlParams: nil, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    func updateContactNumber(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        let requestParameters:[String: Any] = ["phoneNo": self.mobileNumber ?? ""]
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-        
-        DataFactory.getData(.updatePrimaryNumber, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    func updateAppRating(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-        
-        DataFactory.getData(.updateAppRating, requestParams:nil, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    
-    func skipRegistration(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-//Prince
-        let registrationStatusID = ""//DeviceUtil.sharedInstance.deviceModel.registrationStatusId
-        
-        let urlParameters:[String: Any] = ["[registrationStatusId]": registrationStatusID ]
-        
-        DataFactory.getData(.createGuestAccount, requestParams:nil, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    
-    func updateCrownDetails(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-        
-        DataFactory.getData(.updateAppRating, requestParams:nil, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error{
-                let response = (parsedModel as! UserModel)
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-            
-        }
-    }
-    
-    func updateSettings(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        var requestParameters:[String: Any] = [:]
-        
-        if self.isAdmin {
-            requestParameters = ["isMlm":self.allowMultiLevelMarketing, "showCheckinDatetime":self.canShowCheckinDateTime, "checkinOtpHandshake":self.checkinOtpHandshake, "userType":self.userType]
-        } else {
-            requestParameters = ["isMlm":self.allowMultiLevelMarketing, "showCheckinDatetime":self.canShowCheckinDateTime]
-        }
-        
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-        DataFactory.getData(.updateProfile, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    func createCrownitUser(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        let requestParameters:[String: Any] = ["fbId":self.socialId ?? "", "deviceId":"DeviceManger", "phoneNo":self.mobileNumber ?? "", "fbFriendsCount":self.fbFriendCount]
-        
-        DataFactory.getData(.updateProfile, requestParams:requestParameters, urlParams: nil, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    
-    func verifyCrownItUserOtp(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-//Prince - deivce manager and location manager
-        let requestParameters:[String: Any] = ["fbId":self.socialId ?? "", "fbEmail":self.emailId ?? "", "fbName":self.name ?? "", "deviceId":"DeviceManger", "otp":self.otp ?? "", "longitude":"locatioinManager", "latitude":"locatino",  "platform":"device", "gcmId":"device or apputil"]
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-
-        DataFactory.getData(.verifyOTP, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    func updateLocationAtServerByCityId(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        if !String.isValid(self.userId) {
-            self.userId = ""
-        }
-        //Prince - deivce manager and location manager
-        let requestParameters:[String: Any] = ["cityId":self.cityId ?? ""]
-        let urlParameters:[String: Any] = ["[user_id]": self.userId ?? ""]
-
-        DataFactory.getData(.updateLocationByCityId, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    func fbRegistrationOnCrownit(completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-//Prince
-        var deviceId = ""//device manager
-        
-        if !String.isValid(deviceId) {
-            deviceId = ""
-        }
-        let requestParameters:[String: Any] = ["fbId":self.socialId ?? "", "fbEmail":self.emailId ?? "", "fbId":self.cityId ?? ""]
-
-        let urlParameters:[String: Any] = ["[device_id]": deviceId]
-        
-        DataFactory.getData(.updateFacebookLoginDetails, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    func updateFacebookDetails(fbUserModel:FBUserModel, userID:String?, completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        //Prince
-
-        let requestParameters:[String: Any] = ["education":fbUserModel.education ?? "", "fbFriendCount":fbUserModel.friendCount, "fbMaritualStatus":fbUserModel.maritualStatus ?? "", "fbSex":fbUserModel.gender ?? "", "fbCity":fbUserModel.city ?? "", "fbDob":fbUserModel.dateOfBirth ?? "", "fbWorksAt":fbUserModel.worksAt ?? ""]
-        
-        let urlParameters:[String: Any] = ["[user_id]": userID ?? ""]
-        
-        DataFactory.getData(.updateFacebookDetails, requestParams:requestParameters, urlParams: urlParameters, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
-    func updateFacebookFriends(facebookFriends:String?, completion: @escaping (_ error:Error?, _ responseObject: UserModel?) -> Void) {
-        //Prince
-        
-        if !ValidationUtils.isStringValid(facebookFriends) {
-            return
-        }
-        
-        let requestParameters:[String: Any] = ["fbFriendsData":facebookFriends ?? ""]
-        
-        DataFactory.getData(.updateFacebookFriendsData, requestParams:requestParameters, urlParams: nil, model: self) { (error, parsedModel) in
-            
-            if nil == error {
-                let response = (parsedModel as! UserModel)
-                
-                completion(error,self)
-            } else {
-                completion(error,nil)
-            }
-        }
-    }
-    
     override init() {
         super.init()
     }
@@ -400,7 +148,7 @@ class UserModel: BaseDataModel {
         self.emailId = aDecoder.decodeObject(forKey: "emailId")  as! String?
         self.firstName = aDecoder.decodeObject(forKey: "firstName")  as! String?
         self.lastName = aDecoder.decodeObject(forKey: "lastName")  as! String?
-        self.gender = aDecoder.decodeObject(forKey: "gender") as! CrownItUserGender
+        self.gender = aDecoder.decodeObject(forKey: "gender") as! TILUserGender
         self.fbFriendCount = aDecoder.decodeInteger(forKey: "fbFriendCount")
         self.userId = aDecoder.decodeObject(forKey: "userId")  as! String?
         self.sessionId = aDecoder.decodeObject(forKey: "sessionId")  as! String?
@@ -411,7 +159,7 @@ class UserModel: BaseDataModel {
         self.isE2REnabled = aDecoder.decodeBool(forKey: "isE2REnabled")
         self.canShowCheckinDateTime = aDecoder.decodeBool(forKey: "canShowCheckinDateTime")
         self.allowMultiLevelMarketing = aDecoder.decodeBool(forKey: "allowMultiLevelMarketing")
-        self.userType = aDecoder.decodeObject(forKey: "userType") as! CrownItUserType
+        self.userType = aDecoder.decodeObject(forKey: "userType") as! TILUserType
         self.checkinOtpHandshake = aDecoder.decodeBool(forKey: "checkinOtpHandshake")
         self.isNewUser = aDecoder.decodeBool(forKey: "isNewUser")
         self.isAdmin = aDecoder.decodeBool(forKey: "isAdmin")
@@ -434,13 +182,13 @@ class UserModel: BaseDataModel {
         self.deviceToken = aDecoder.decodeObject(forKey: "deviceToken") as? String
         self.olaAccessToken = aDecoder.decodeObject(forKey: "olaAccessToken") as? String
         self.userSignupMonth = aDecoder.decodeObject(forKey: "userSignupMonth") as? String
-        self.crownItFriend = aDecoder.decodeObject(forKey: "crownItFriend") as? String
+        self.TILFriend = aDecoder.decodeObject(forKey: "TILFriend") as? String
 
         self.isReferrerAdded = aDecoder.decodeBool(forKey: "isReferrerAdded")
         self.isReferrerAllowed = aDecoder.decodeBool(forKey: "isReferrerAllowed")
         self.linkedAccounts = aDecoder.decodeObject(forKey: "linkedAccounts") as! NSArray?
 //Prince
-//        self.crownitFriendsArray = aDecoder.decodeObject(forKey: "crownitFriendsArray")
+//        self.TILFriendsArray = aDecoder.decodeObject(forKey: "TILFriendsArray")
     }
     
     required init?(map: Map) {
@@ -468,9 +216,9 @@ class UserModel: BaseDataModel {
         aCoder.encode(deviceToken, forKey: "deviceToken")
         aCoder.encode(olaAccessToken, forKey: "olaAccessToken")
         aCoder.encode(userSignupMonth, forKey: "userSignupMonth")
-        aCoder.encode(crownItFriend, forKey: "crownItFriend")
+        aCoder.encode(TILFriend, forKey: "TILFriend")
         aCoder.encode(linkedAccounts, forKey: "linkedAccounts")
-//        aCoder.encode(crownitFriendsArray, forKey: "crownitFriendsArray")
+//        aCoder.encode(TILFriendsArray, forKey: "TILFriendsArray")
         //Int
         aCoder.encode(fbFriendCount, forKey: "fbFriendCount")
         aCoder.encode(currentCrowns, forKey: "currentCrowns")
@@ -495,7 +243,7 @@ class UserModel: BaseDataModel {
 
     
 }
-enum CrownItUserType {
+enum TILUserType {
     case None, Default, LoggedIn
 }
 enum MobileNumberConnectionType {
@@ -504,7 +252,9 @@ enum MobileNumberConnectionType {
 enum UserDataSaveType {
     case None, API, LocalLocation, LocalAll
 }
-enum CrownItUserGender {
+enum TILUserGender {
     case None, Male, Female
 }
-
+ 
+/*
+*/*/

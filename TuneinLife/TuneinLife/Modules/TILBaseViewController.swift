@@ -1,14 +1,14 @@
 //
-//  CRBaseViewController.swift
-//  Crownit
+//  TILBaseViewController.swift
+//  til2
 //
-//  Created by hitesh on 28/12/16.
-//  Copyright © 2016 GoldVip Technology Solutions Pvt. Ldt. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
 
-class CRBaseViewController: UIViewController {
+class TILBaseViewController: UIViewController {
 
     let reachability = Reachability()!
     
@@ -21,9 +21,9 @@ class CRBaseViewController: UIViewController {
             showNavigationDropDownView(self.navigationController!, message: "Internet not available", height: 25)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(CRBaseViewController.showDropDownView(_:)), name: NSNotification.Name(rawValue: "NoInternetViewShow"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TILBaseViewController.showDropDownView(_:)), name: NSNotification.Name(rawValue: "NoInternetViewShow"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(CRBaseViewController.hideDropDownView(_:)), name: NSNotification.Name(rawValue: "NoInternetViewHide"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TILBaseViewController.hideDropDownView(_:)), name: NSNotification.Name(rawValue: "NoInternetViewHide"), object: nil)
         
     }
     

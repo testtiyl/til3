@@ -1,9 +1,9 @@
 //
 //  StringExtension.swift
-//  Crownit
+//  til2
 //
-//  Created by hitesh on 29/12/16.
-//  Copyright © 2016 GoldVip Technology Solutions Pvt. Ldt. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import Foundation

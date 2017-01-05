@@ -1,9 +1,9 @@
 //
 //  DataFactory.swift
-//  CrownIt
+//  til2
 //
-//  Created by Nikhil Bansal on 05/10/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -98,19 +98,20 @@ class DataFactory: NSObject {
         
         var baseUrl:String = APIConstants.baseServerURL
         
-        if config.baseUrlType == 1{
-            baseUrl = APIConstants.baseNodeServerURL
-        }
-        
+//        if config.baseUrlType == 1{
+//            baseUrl = APIConstants.baseNodeServerURL
+//        }
+//        
         
         let rqstModel = APIRequestModel(baseUrl:baseUrl, apiUrl: url , parameters: requestParams, httpMethodType: config.methodType, encoding: config.paramEncodingType,isAuthHeaderRequired: config.isAuthHeaderRequired)
         
     
         APIUtil().fetchData(rqstModel) { (response) in
-            var parsedModel:BaseDataModel?
-            
+//            var parsedModel:BaseDataModel?
+            var parsedModel:NSObject?
+
             if (response.isSuccess){
-                parsedModel = model.parseData(json: response.rawResponse)
+//                parsedModel = model.parseData(json: response.rawResponse)
                 
                 let hash = generateHash(config, requestParams: requestParams, urlParams: urlParams)
                 
@@ -139,24 +140,24 @@ class DataFactory: NSObject {
             return
         }
         
-        let parsedModel = model.parseData(json: (cacheModel?.data)!)
-        
-        // invalid cache
-        if (cacheModel?.isInvalidated)!{
-            let responseModel = APIResponseModel()
-            responseModel.isSuccess = false
-            responseModel.msg = "Cache Invalidated"
-            responseModel.responseCode = CacheErrorCode.InvalidData.rawValue
-            responseModel.customModel = parsedModel
-            
-            completion(responseModel)
-            
-            return
-        }
+//        let parsedModel = model.parseData(json: (cacheModel?.data)!)
+//        
+//        // invalid cache
+//        if (cacheModel?.isInvalidated)!{
+//            let responseModel = APIResponseModel()
+//            responseModel.isSuccess = false
+//            responseModel.msg = "Cache Invalidated"
+//            responseModel.responseCode = CacheErrorCode.InvalidData.rawValue
+//            responseModel.customModel = parsedModel
+//            
+//            completion(responseModel)
+//            
+//            return
+//        }
         
         let responseModel = APIResponseModel()
         responseModel.isSuccess = true
-        responseModel.customModel = parsedModel
+//        responseModel.customModel = parsedModel
         
         completion(responseModel)
     }

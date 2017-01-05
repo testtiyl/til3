@@ -1,9 +1,9 @@
 //
 //  FBWebViewController.swift
-//  CrownIt
+//  til2
 //
-//  Created by Nikhil Bansal on 16/11/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -19,7 +19,7 @@ enum WebviewType:Int {
 
 class FBWebViewController: UIViewController, UIWebViewDelegate {
     
-    let FBClientId = "588067294623288"
+    let FBClientId = "588067294623288  0"
 
     @IBOutlet var webview: UIWebView!
 
@@ -58,10 +58,10 @@ class FBWebViewController: UIViewController, UIWebViewDelegate {
         
         let permissions = getPermissions()
         
-        var urlStr = "https://www.facebook.com/dialog/oauth?client_id=\(FBClientId)&display=popup&response_type=token&scope=\(permissions)&redirect_uri=http://blog.crownit.in"
+        var urlStr = "https://www.facebook.com/dialog/oauth?client_id=\(FBClientId)&display=popup&response_type=token&scope=\(permissions)&redirect_uri=http://blog.TIL.in"
         
         if webviewType == .Share {
-            urlStr = "https://www.facebook.com/dialog/share?app_id=\(FBClientId)&display=popup&href=\(shareUrl)&redirect_uri=http://blog.crownit.in&quote=\(shareText)"
+            urlStr = "https://www.facebook.com/dialog/share?app_id=\(FBClientId)&display=popup&href=\(shareUrl)&redirect_uri=http://blog.TIL.in&quote=\(shareText)"
         }
         
         urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -111,7 +111,7 @@ class FBWebViewController: UIViewController, UIWebViewDelegate {
     private func checkForAccessToken(url:String)-> Bool{
         let urlComponents = url.components(separatedBy: "?")
         
-        if urlComponents.count > 0 && urlComponents[0].contains("http://blog.crownit.in"){
+        if urlComponents.count > 0 && urlComponents[0].contains("http://blog.TIL.in"){
             
             let urlHashComponents = url.components(separatedBy: "#")
             if urlHashComponents.count>1 {
@@ -139,7 +139,7 @@ class FBWebViewController: UIViewController, UIWebViewDelegate {
     private func checkForRedirectUri(url:String)-> Bool{
         let urlComponents = url.components(separatedBy: "?")
         
-        if urlComponents.count > 0 && urlComponents[0].contains("http://blog.crownit.in"){
+        if urlComponents.count > 0 && urlComponents[0].contains("http://blog.TIL.in"){
             return true
         }
         

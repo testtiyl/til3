@@ -1,9 +1,9 @@
 //
 //  APIConfigurationUtil.swift
-//  CrownIt
+//  til2
 //
-//  Created by Nikhil Bansal on 05/10/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -42,7 +42,6 @@ class APIConfiguration:NSObject {
     var paramEncodingType:encodingType = encodingType.URL
     var methodType:HttpMethodType = .get
     var isAppendUrlParams = false
-    var baseUrlType = 0
     
     convenience init(dict:[String:Any]) {
         self.init()
@@ -55,10 +54,6 @@ class APIConfiguration:NSObject {
         
         if dict["isAppendUrlParams"] != nil {
             isAppendUrlParams = dict["isAppendUrlParams"] as! Bool
-        }
-        
-        if dict["baseUrlType"] != nil {
-            baseUrlType = dict["baseUrlType"] as! Int
         }
         
         switch dict["cachePolicy"] as! String {

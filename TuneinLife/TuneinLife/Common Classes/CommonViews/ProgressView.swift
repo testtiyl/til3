@@ -1,9 +1,9 @@
 //
 //  ProgressView.swift
-//  CrownitMerchantApp
+//  til2MerchantApp
 //
-//  Created by Nikhil Bansal on 27/05/16.
-//  Copyright © 2016 Nikhil Bansal. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,9 @@
 //
 //  NavigationPopDownView.swift
-//  CrownIt
+//  til2
 //
-//  Created by hitesh on 16/09/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit

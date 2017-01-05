@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Crownit
+//  til2
 //
-//  Created by hitesh on 28/12/16.
-//  Copyright © 2016 GoldVip Technology Solutions Pvt. Ldt. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -14,14 +14,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showTip()
-        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.launchFbLogin), userInfo: nil, repeats: false)
+//        showTip()
+//        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.launchFbLogin), userInfo: nil, repeats: false)
+        launchFbLogin()
     }
     
     func launchFbLogin() {
         let storyboard = UIStoryboard(name: UIConstants.getStoryboardIndentifier(.registration), bundle: Bundle.main)
-        let navigationController:UINavigationController = storyboard.instantiateViewController(withIdentifier: UIConstants.getViewControllerIdentifier(.loginNavigation)) as! UINavigationController
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: UIConstants.getViewControllerIdentifier(.onBording))
+        let navigationController:UINavigationController = storyboard.instantiateViewController(withIdentifier: "navLogin") as! UINavigationController
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "onboardingViewControllerBoard")
         navigationController.viewControllers = [secondViewController]
         let appDel = UIApplication.shared.delegate as! AppDelegate
         appDel.window?.rootViewController = nil

@@ -1,9 +1,9 @@
 //
 //  APIRequestModel.swift
-//  CrownIt
+//  til2
 //
-//  Created by Nikhil Bansal on 10/06/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -22,8 +22,6 @@ enum encodingType:String{
 
 class APIRequestModel: NSObject {
     var baseUrl:String = APIConstants.baseServerURL
-//Prince
-    var olaBaseUrl = ""//OlaApiConstants.baseServerURL
     var apiUrl:String!
     var parametersDict:[String:Any]?
     var httpMethodType:HttpMethodType = .get

@@ -1,9 +1,9 @@
 //
 //  OnboardingType2View.swift
-//  CrownIt
+//  til2
 //
-//  Created by swarnima on 27/12/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/12/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -31,9 +31,9 @@ class OnboardingType2View: UIView {
     
     func updateView() {
 
-        let string:NSMutableAttributedString = NSMutableAttributedString(string: "Offers \u{2022} Cashbacks \u{2022} Discounts")
-        string.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0xB6D999), range: NSRange(location:7,length:1))        
-         string.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0xB6D999), range: NSRange(location:19,length:1))
+        let string:NSMutableAttributedString = NSMutableAttributedString(string: "Tune \u{2022} Your \u{2022} Life")
+        string.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0xB6D999), range: NSRange(location:5,length:1))
+         string.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0xB6D999), range: NSRange(location:10,length:1))
         
         topSecondLabel.attributedText = string
         
@@ -46,8 +46,6 @@ class OnboardingType2View: UIView {
         imgHeight.constant = AppConstants.ScreenWidth - 90
         
     }
-    
-    
     
     @IBAction func skipLogin(_ sender: AnyObject) {
         

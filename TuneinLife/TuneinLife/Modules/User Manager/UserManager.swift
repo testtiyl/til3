@@ -1,9 +1,9 @@
 //
 //  UserManager.swift
-//  Crownit
+//  til2
 //
 //  Created by hitesh on 01/01/17.
-//  Copyright © 2017 GoldVip Technology Solutions Pvt. Ldt. All rights reserved.
+//  Copyright © 2017 Hitesh Kumar. Ldt. All rights reserved.
 //
 
 import UIKit

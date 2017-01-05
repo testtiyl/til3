@@ -1,9 +1,9 @@
 //
 //  OnboardingViewController.swift
-//  CrownIt
+//  til2
 //
-//  Created by swarnima on 15/03/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 15/03/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
@@ -36,9 +36,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
-
-class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIScrollViewDelegate, OnboardingType2ViewDelegate {
+class OnboardingViewController: TILBaseViewController, FBLoginButtonDelegate, UIScrollViewDelegate, OnboardingType2ViewDelegate {
     
     var fbLogInView: UIView!
     var skipButton:UIButton!
@@ -49,152 +47,25 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
     let SCREEN_HEIGHT = AppConstants.ScreenHeight
     
     var isPhoneRegScreenLoaded:Bool!
-    
-    var viewArray = [OnboardingView]()
-    
-    var firstOnboardingScreen:FirstOnboardingView!
-    var secondOnboardingScreen:SecondOnboardingView!
-    var thirdOnboardingScreen:ThirdOnboardingView!
-    var fourthOnboardingScreen:FourthOnboardingView!
-    var fifthOnboardingScreen:FifthOnvoardingView!
-    
-    var isTypeIOnboarding:Bool = false
-    
+        
     var onboardingType2View:OnboardingType2View!
 
     var xOffset :CGFloat!
     var yOffset :CGFloat!
     
-    let flyingView = UIView()
-    
-    let flyingBill = UIImageView()
-    let flyingCrown = UIImageView()
-    let flyingTicket = UIImageView()
-    
-    var fBillInitialOrigin : CGPoint!
-    var fBillFinalOrigin: CGPoint!
-    var fBillFrame : CGRect!
-    
-    var fCrownInitialOrigin : CGPoint!
-    var fCrownFinalOrigin: CGPoint!
-    var fCrownFrame : CGRect!
-    var fCrownFinalHeight : CGFloat!
-    
-    var fTicketInitialOrigin : CGPoint!
-    var fTicketFinalOrigin: CGPoint!
-    var fTicketFrame : CGRect!
-    var fTicketFinalHeight : CGFloat!
-    
-    var fTicketInitialOrigin2 : CGPoint!
-    var fTicketFinalOrigin2: CGPoint!
-    var fTicketFrame2 : CGRect!
-    var fTicketFinalHeight2 : CGFloat!
-    
-    var fCrownInitialOrigin1 : CGPoint!
-    var fCrownFinalOrigin1: CGPoint!
-    var fCrownFrame1 : CGRect!
-    var fCrownFinalHeight1 : CGFloat!
-    
-    var crownFinalWidth : CGFloat!
-    
-    var firstScreenInitialCoordinates:CGPoint!
-    var firstScreenFinalCoordinates:CGPoint!
-    var onboardingImageView:UIImageView!
-    var onboardingImageView2 : UIImageView!
-    
-    var circularImageView:UIImageView!
-    var circularInitialCoordinates:CGPoint!
-    var circularFinalCoordinates:CGPoint!
-    var circleInitailFrame:CGRect!
-    
-    var pageControl:UIPageControl!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pageControl = UIPageControl(frame: CGRect(x: AppConstants.ScreenWidth/2 - 100, y: AppConstants.ScreenHeight - 120, width: 200, height: 20))
-        self.view.addSubview(pageControl)
-        self.fetchOnboardingType()
+        self.setUpOnboardingType2()
         
         updateDeviceInfo()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func configurePageControl(_ count:Int) {
-        self.pageControl.numberOfPages = count
-        self.pageControl.currentPage = 0
-        self.pageControl.tintColor = UIColor.lightGray
-        self.pageControl.pageIndicatorTintColor = UIColor.groupTableViewBackground
-        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
-        
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
-        pageControl.currentPage = Int(pageNumber)
     }
     
     
     internal func updateDeviceInfo(){
 //        DeviceManager.sharedInstance().updateUserDeviceData { (response) in
 //    }
-    }
-    
-    func fetchOnboardingType() {
-        
-        if (UserDefaults.standard.object(forKey: "OnboardingScreenType") as? String != nil) {
-        
-            if UserDefaults.standard.object(forKey: "OnboardingScreenType") as! String  == "1" {
-                isTypeIOnboarding = true
-            } else {
-                isTypeIOnboarding = false
-            }
-        
-            if isTypeIOnboarding {
-                self.setUpTypeIOnboarding()
-            } else {
-                self.setUpOnboardingType2()
-            }
-            
-            
-        } else {
-        
-            weak var weakSelf = self
-//            UIHelper.showLoaderView(weakSelf!.view, animated: true)
-            let model = OnboardingTypeModel()
-            model.fetchOnboardingData({ (responseObj) in
-                
-                if responseObj.isSuccess {
-                    UserDefaults.standard.set(model.onBoardingVersion, forKey: "OnboardingScreenType")
-                } else {
-                     UserDefaults.standard.set("1", forKey: "OnboardingScreenType")
-                }
-                self.fetchOnboardingType()
-//                UIHelper.hideLoaderView(weakSelf!.view, animated: true)
-            })
-        }
-    }
-    
-    
-    func initScrollView (_ screens:CGFloat) {
-        onboardingScrollView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        onboardingScrollView.contentSize=CGSize(width: screens*SCREEN_WIDTH!, height: SCREEN_HEIGHT! - 50);
-        onboardingScrollView.isScrollEnabled=true;
-        onboardingScrollView.showsHorizontalScrollIndicator=true;
-        onboardingScrollView.isUserInteractionEnabled=true;
-        onboardingScrollView.delegate=self;
-        onboardingScrollView.isPagingEnabled=true;
-        onboardingScrollView.bounces=false;
-        self.view.addSubview(onboardingScrollView)
-        
     }
     
     func setUpOnboardingType2() {
@@ -233,322 +104,6 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
         }
         
     }
-
-    
-    func initializeTypeI() {
-        firstOnboardingScreen = FirstOnboardingView()
-        secondOnboardingScreen = SecondOnboardingView()
-        thirdOnboardingScreen = ThirdOnboardingView()
-        fourthOnboardingScreen = FourthOnboardingView()
-        fifthOnboardingScreen = FifthOnvoardingView()
-    }
-    
-    
-    func setUpTypeIOnboarding() {
-        self.initializeTypeI()
-        self.initScrollView(5.0)
-        self.setupScrollView()
-        self.configurePageControl(5)
-        self.setUpSkipButtonUI()
-        
-        
-        fbLogInView = UIView ()
-        fbLogInView.frame = CGRect(x: 0, y: SCREEN_HEIGHT! - 50, width: SCREEN_WIDTH!, height: 50)
-        self.setUpFbLogIn()
-        
-        if self.skipButton != nil {
-            self.view.bringSubview(toFront: skipButton)
-        }
-        if self.fbLogInView != nil {
-            self.view.bringSubview(toFront: fbLogInView)
-        }
-        
-        self.addTransitionToFirstScreen()
-        self.addFlyingBill()
-        self.addFlyingTicket()
-        self.addFlyingCrown()
-        
-        self.addFlyingTicket2()
-        self.addFlyingCrown1()
-    }
-    
-    func setupScrollView ()  {
-        
-        firstOnboardingScreen.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        secondOnboardingScreen.frame = CGRect(x: SCREEN_WIDTH!, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        thirdOnboardingScreen.frame = CGRect(x: 2*SCREEN_WIDTH!, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        fourthOnboardingScreen.frame = CGRect(x: 3*SCREEN_WIDTH!, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        fifthOnboardingScreen.frame = CGRect(x: 4*SCREEN_WIDTH!, y: 0, width: SCREEN_WIDTH!, height: SCREEN_HEIGHT!)
-        
-        onboardingScrollView.addSubview(firstOnboardingScreen)
-        onboardingScrollView.addSubview(secondOnboardingScreen)
-        onboardingScrollView.addSubview(thirdOnboardingScreen)
-        onboardingScrollView.addSubview(fourthOnboardingScreen)
-        onboardingScrollView.addSubview(fifthOnboardingScreen)
-        
-        viewArray.append(firstOnboardingScreen)
-        viewArray.append(secondOnboardingScreen)
-        viewArray.append(thirdOnboardingScreen)
-        viewArray.append(fourthOnboardingScreen)
-        viewArray.append(fifthOnboardingScreen)
-    
-    }
-    
-    
-    func addTransitionToFirstScreen () {
-        
-        firstScreenInitialCoordinates = CGPoint(x: firstOnboardingScreen.imageView.frame.origin.x, y: firstOnboardingScreen.imageView.frame.origin.y)
-        firstScreenFinalCoordinates = CGPoint(x: SCREEN_WIDTH! + secondOnboardingScreen.imageView.frame.origin.x, y: secondOnboardingScreen.imageView.frame.origin.y)
-        
-        onboardingImageView = UIImageView()
-        onboardingImageView.frame = firstOnboardingScreen.imageView.frame
-        onboardingImageView.image = UIImage(named: "c1.png")
-        self.onboardingScrollView.addSubview(onboardingImageView)
-        
-        onboardingImageView2 = UIImageView()
-        onboardingImageView2.frame = firstOnboardingScreen.imageView.frame
-        onboardingImageView2.image = UIImage(named: "c2_with-bill.png")
-        onboardingImageView2.alpha = 0
-        self.onboardingScrollView.addSubview(onboardingImageView2)
-
-        
-        circularImageView = UIImageView()
-        circleInitailFrame = CGRect(x: self.onboardingImageView.frame.origin.x - 25, y: self.onboardingImageView.frame.origin.y - 25, width: self.onboardingImageView.frame.size.height + 50, height: self.onboardingImageView.frame.size.height + 50)
-        circularImageView.frame = circleInitailFrame
-        circularImageView.image = UIImage(named: "A1.png")
-        self.onboardingScrollView.addSubview(circularImageView)
-        circularInitialCoordinates = CGPoint(x: SCREEN_WIDTH!/2, y: 0.5 * SCREEN_HEIGHT!)
-        circularFinalCoordinates = CGPoint(x: 1.5 * SCREEN_WIDTH! , y: 0.5 * SCREEN_HEIGHT!)
-        secondOnboardingScreen.imageView.alpha = 0
-        
-    }
-    
-    func addFlyingBill() {
-        
-        fBillFrame = CGRect (x: secondOnboardingScreen.imageView.frame.origin.x + secondOnboardingScreen.imgRadius - 25 + SCREEN_WIDTH!, y: secondOnboardingScreen.imageView.frame.origin.y + secondOnboardingScreen.imgRadius - 20, width: 55, height: 0.52 * secondOnboardingScreen.imgRadius )   //75
-        flyingBill.frame = fBillFrame
-        flyingBill.image = UIImage(named: "bill_xxxhdpi")
-        
-        fBillInitialOrigin = fBillFrame.origin
-        
-        fBillFinalOrigin = CGPoint(x: 2*SCREEN_WIDTH! + thirdOnboardingScreen.imgRadius + 6, y: SCREEN_HEIGHT!/2)
-        
-        self.onboardingScrollView.addSubview(flyingBill)
-    }
-    
-    func addFlyingCrown() {
-        
-        fCrownFrame = CGRect(x: 2 * SCREEN_WIDTH! + thirdOnboardingScreen.imgRadius - 5, y: thirdOnboardingScreen.imageView.frame.origin.y + 0.3 * thirdOnboardingScreen.imgRadius + 7  , width: 60, height: 45)
-        flyingCrown.frame = fCrownFrame
-        flyingCrown.image = UIImage (named: "crown_img")
-        
-        fCrownInitialOrigin = fCrownFrame.origin
-        fCrownFinalOrigin = CGPoint(x: 3 * SCREEN_WIDTH! +  thirdOnboardingScreen.imgRadius + 42.5, y: thirdOnboardingScreen.imageView.frame.origin.y + 1.2 * thirdOnboardingScreen.imgRadius - 4 )
-        fCrownFinalHeight = 30
-        self.onboardingScrollView.addSubview(flyingCrown)
-        
-    }
-    
-    func addFlyingTicket() {
-        
-        fTicketFrame = CGRect(x: 2 * SCREEN_WIDTH! + thirdOnboardingScreen.imgRadius - 5 , y: thirdOnboardingScreen.imageView.frame.origin.y + 0.3 * thirdOnboardingScreen.imgRadius + 7 , width: 40, height: 25)
-        flyingTicket.frame = fTicketFrame
-        flyingTicket.image = UIImage (named: "ticket0001")
-        
-        fTicketInitialOrigin = fTicketFrame.origin
-        fTicketFinalOrigin =  CGPoint(x: 3 * SCREEN_WIDTH! + thirdOnboardingScreen.imgRadius - 15, y: thirdOnboardingScreen.imageView.frame.origin.y + 1.2 * thirdOnboardingScreen.imgRadius )
-        fTicketFinalHeight = 17
-        self.onboardingScrollView.addSubview(flyingTicket)
-        
-    }
-    
-    
-    func addFlyingTicket2 () {
-        
-        fTicketFrame2 = CGRect(x: fTicketFinalOrigin.x, y: fTicketFinalOrigin.y, width: fTicketFinalHeight * fTicketFrame.size.width / fTicketFrame.size.height, height: fTicketFinalHeight)
-        fTicketFinalHeight2 =  fTicketFinalHeight * 1.4
-        let ticketWidth = fTicketFinalHeight2 * fTicketFrame2.size.width / fTicketFrame2.size.height
-        fTicketInitialOrigin2 = fTicketFinalOrigin
-        fTicketFinalOrigin2 = CGPoint(x: 4 * SCREEN_WIDTH! + SCREEN_WIDTH!/2 - ticketWidth/2 , y: fifthOnboardingScreen.imageView.frame.origin.y + 1.6 * fifthOnboardingScreen.imgRadius )
-        
-    }
-    
-    func addFlyingCrown1 () {
-        
-        crownFinalWidth = fCrownFinalHeight * fCrownFrame.size.width / fCrownFrame.size.height
-        
-        fCrownFrame1 = CGRect(x: fCrownFinalOrigin.x, y: fCrownFinalOrigin.y, width: crownFinalWidth, height: fCrownFinalHeight)
-        fCrownInitialOrigin1 = fCrownFinalOrigin
-        
-        let screenWidthFour = 4 * SCREEN_WIDTH!
-        let screenWidthHalf = SCREEN_WIDTH!/2
-        let crownFinalWidthHalf = crownFinalWidth/2
-        
-        let xVal = screenWidthFour + screenWidthHalf - crownFinalWidthHalf + 7
-        let yVal = fifthOnboardingScreen.imageView.frame.origin.y + fifthOnboardingScreen.imgRadius/6 - 6
-        
-        fCrownFinalOrigin1 = CGPoint(x: xVal, y: yVal)
-        
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if isTypeIOnboarding == true {
-            
-            self.skipButton.isUserInteractionEnabled = false
-            self.skipButton.alpha = 0
-        
-        if (scrollView.contentOffset.x <= SCREEN_WIDTH) {
-            
-            self.addTransition(onboardingImageView, initialCoordinates: firstScreenInitialCoordinates , finalCoordinates: firstScreenFinalCoordinates, scrollView: scrollView, subtractFromOffset: 0.0, offsetSpeed: 1.0)
-            
-            self.addTransition(onboardingImageView2, initialCoordinates: firstScreenInitialCoordinates , finalCoordinates: firstScreenFinalCoordinates, scrollView: scrollView, subtractFromOffset: 0.0, offsetSpeed: 1.0)
-            
-            self.reduceScaleWithFixedOrigin(circularImageView, scrollView: scrollView, finalHeight: 1, viewFrame: circleInitailFrame, initialCenter: circularInitialCoordinates, finalCenter: circularFinalCoordinates, subtractFromOffset: 0)
-            self.decreaseAlpha(circularImageView, scrollView: scrollView, subtractFromOffest: 0)
-            
-            if scrollView.contentOffset.x >= 0.7 * SCREEN_WIDTH! {
-                
-                onboardingImageView2.alpha = (scrollView.contentOffset.x - 0.7 * SCREEN_WIDTH!) / (0.3 * SCREEN_WIDTH!)
-                onboardingImageView.alpha = 1 - ((scrollView.contentOffset.x - 0.7 * SCREEN_WIDTH!) / (0.3 * SCREEN_WIDTH!))
-            } else {
-                onboardingImageView2.alpha = 0
-                onboardingImageView.alpha = 1
-            }
-            self.onboardingScrollView.bringSubview(toFront: flyingBill)
-            
-            
-        }
-        
- 
-        if (scrollView.contentOffset.x > SCREEN_WIDTH && scrollView.contentOffset.x < 2 * SCREEN_WIDTH!) {
-        
-            flyingBill.alpha = 1
-            
-            self.addTransition(flyingBill, initialCoordinates: fBillInitialOrigin, finalCoordinates: fBillFinalOrigin, scrollView: scrollView, subtractFromOffset: SCREEN_WIDTH!, offsetSpeed: 1)
-            
-            self.scaleTHeFlyingVIew(flyingBill, scrollView: scrollView, finalHeight: 1.0, viewFrame: fBillFrame, initialCordinates: fBillInitialOrigin, finalCoordinates: fBillFinalOrigin, subtractFromOffset:  SCREEN_WIDTH!)
-
-        } else {
-            flyingBill.alpha = 0;
-        }
-        
-        ///////////////  ticket and crown from screen 2 -> 3
-        
-        if (scrollView.contentOffset.x > 2 * SCREEN_WIDTH! && scrollView.contentOffset.x < 3 * SCREEN_WIDTH!) {
-            
-            self.addTransition(flyingCrown, initialCoordinates: fCrownInitialOrigin, finalCoordinates: fCrownFinalOrigin, scrollView: scrollView, subtractFromOffset: 2 * SCREEN_WIDTH!, offsetSpeed: 1.2)
-            self.addTransition(flyingTicket, initialCoordinates: fTicketInitialOrigin, finalCoordinates: fTicketFinalOrigin, scrollView: scrollView, subtractFromOffset: 2 * SCREEN_WIDTH!, offsetSpeed : 1)
-            
-            self.scaleTHeFlyingVIew(flyingCrown, scrollView: scrollView, finalHeight: fCrownFinalHeight, viewFrame: fCrownFrame, initialCordinates: fCrownInitialOrigin, finalCoordinates: fCrownFinalOrigin, subtractFromOffset: SCREEN_WIDTH!)
-            self.scaleTHeFlyingVIew(flyingTicket, scrollView: scrollView, finalHeight: fTicketFinalHeight, viewFrame: fTicketFrame, initialCordinates: fTicketInitialOrigin, finalCoordinates: fTicketFinalOrigin, subtractFromOffset: 2 * SCREEN_WIDTH!)
-        }
-        
-        if scrollView.contentOffset.x <= 2 * SCREEN_WIDTH! {
-            
-            flyingCrown.alpha = 0
-            flyingTicket.alpha = 0
-        }else {
-            flyingCrown.alpha = 1
-            flyingTicket.alpha = 1
-        }
-        
-        if (scrollView.contentOffset.x > 3 * SCREEN_WIDTH! && scrollView.contentOffset.x <= 4 * SCREEN_WIDTH!) {
-            
-            self.skipButton.isUserInteractionEnabled = true
-            self.skipButton.alpha = 1
-            
-            self.addTransition(flyingTicket, initialCoordinates: fTicketInitialOrigin2, finalCoordinates: fTicketFinalOrigin2, scrollView: scrollView, subtractFromOffset: 3 * SCREEN_WIDTH!, offsetSpeed: 1.2)
-            self.addTransition(flyingCrown, initialCoordinates: fCrownInitialOrigin1, finalCoordinates: fCrownFinalOrigin1, scrollView: scrollView, subtractFromOffset: 3 * SCREEN_WIDTH!, offsetSpeed: 1)
-            self.scaleTHeFlyingVIew(flyingTicket, scrollView: scrollView, finalHeight: fTicketFinalHeight2, viewFrame: fTicketFrame2, initialCordinates: fTicketInitialOrigin2, finalCoordinates: fTicketFinalOrigin2, subtractFromOffset: 3 * SCREEN_WIDTH!)
-        }
-        
-        }
-    }
-    
-    
-    
-    func isCurrentVisibleView (_ scrollView:UIScrollView, theView:UIView) -> Bool {
-        
-        var visibleRect: CGRect!
-        visibleRect = CGRect()
-        visibleRect.size = scrollView.bounds.size;
-        visibleRect.origin = scrollView.contentOffset;
-        
-        let containedViewRect: CGRect = theView.frame;
-        
-        if ( containedViewRect.contains(visibleRect) && !theView.isHidden )
-        {
-            return true
-            
-        } else {
-            return false
-        }
-    }
-    
-    
-    func addTransition (_ theView : UIView, initialCoordinates: CGPoint, finalCoordinates: CGPoint, scrollView:UIScrollView ,subtractFromOffset:CGFloat, offsetSpeed:CGFloat) -> Void {
-        
-        var path = CGPoint()
-        path.x = scrollView.contentOffset.x
-        path.y = ((finalCoordinates.y - initialCoordinates.y)/(finalCoordinates.x - initialCoordinates.x) * ((scrollView.contentOffset.x - subtractFromOffset) * offsetSpeed)) + initialCoordinates.y
-        
-        var coordX = theView.frame.origin.x
-        
-        if coordX <= finalCoordinates.x {
-            
-            coordX = initialCoordinates.x + offsetSpeed * (scrollView.contentOffset.x - subtractFromOffset)
-            theView.frame.origin.y = path.y
-        }
-        
-        if coordX > finalCoordinates.x {
-            coordX = finalCoordinates.x
-            theView.frame.origin.y = finalCoordinates.y
-        }
-        
-            theView.frame.origin.x = coordX
-        
-        
-    }
-    
-    
-    func scaleTHeFlyingVIew (_ theView:UIView, scrollView:UIScrollView, finalHeight:CGFloat, viewFrame:CGRect,initialCordinates: CGPoint, finalCoordinates:CGPoint, subtractFromOffset:CGFloat) {
-        
-        theView.frame.size.height = viewFrame.height - ((viewFrame.height - finalHeight) * (scrollView.contentOffset.x - subtractFromOffset) / (finalCoordinates.x - initialCordinates.x))
-        
-        theView.frame.size.width = viewFrame.width * theView.frame.size.height / viewFrame.height
-    }
-    
-    
-    func reduceScaleWithFixedOrigin  (_ theView:UIView, scrollView:UIScrollView, finalHeight:CGFloat, viewFrame:CGRect,initialCenter: CGPoint, finalCenter:CGPoint, subtractFromOffset:CGFloat) {
-        
-        theView.center.x = initialCenter.x + scrollView.contentOffset.x
-        
-        theView.frame.size.height = viewFrame.height - ((viewFrame.height - finalHeight) * scrollView.contentOffset.x  / (finalCenter.x - initialCenter.x))
-        
-        theView.frame.size.width = viewFrame.width * theView.frame.size.height / viewFrame.height
-        
-        theView.center.x = initialCenter.x + scrollView.contentOffset.x
-        theView.center.y = firstOnboardingScreen.imageView.center.y
-
-    }
-    
-    func increaseAlpha (_ theView: UIView, scrollView: UIScrollView, subtractFromOffest:CGFloat) {
-        
-        var alpha : CGFloat
-        alpha = (scrollView.contentOffset.x - subtractFromOffest) / SCREEN_WIDTH!
-        
-        theView.alpha = alpha
-        
-    }
-    
-    func decreaseAlpha(_ theView: UIView, scrollView: UIScrollView, subtractFromOffest:CGFloat) {
-        
-        var alpha : CGFloat
-        alpha = 1 - (scrollView.contentOffset.x - subtractFromOffest) / SCREEN_WIDTH!
-        
-        theView.alpha = alpha
-    }
     
      //MARK: skip button ////////////////////////
     
@@ -585,10 +140,13 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
     }
     
     func skipButtonPressed(_ sender:AnyObject?){
-        //print("skip")
+        print("skip")
         
-        weak var weakSelf = self
+        let storyboard = UIStoryboard(name: UIConstants.getStoryboardIndentifier(.main), bundle: Bundle.main)
+        let vc:CategoriesViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesViewControllerID") as! CategoriesViewController
+        self.navigationController?.pushViewController(vc, animated: true)
         
+//        weak var weakSelf = self
 //        UIHelper.showLoaderView(self.view, animated: true)
 //        
 //        UserManager.sharedInstance().skipRegistration { (responseObject) -> Void in
@@ -609,16 +167,6 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
 //            }
 //        
 //        }
-        
-        let count = Int(self.onboardingScrollView.contentOffset.x)/Int(SCREEN_WIDTH!)
-        
-        var onboardingType = "OldAnimated"
-        
-        if isTypeIOnboarding == false {
-            onboardingType = "NewStatic"
-        }
-//Prince
-//        AppEventsHelper().track(onBoardingExit: count+1, totalScreens: 5, exitMethod: "Not Now", type: onboardingType)
         
         return
     }
@@ -673,7 +221,7 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
         
         if (isCancelledByUsers){
             
-            UIUtils.showAlertViewwithTitle("Alert", andMessage: "Please authorize Crownit app to access your facebook detail for sucessful login.")
+            UIUtils.showAlertViewwithTitle("Alert", andMessage: "Please authorize TIL app to access your facebook detail for sucessful login.")
             
         }else  {
             UIUtils.showProgressView(view: self.view, animated: true)
@@ -696,7 +244,7 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
         if isCancelledByUsers {
             
             UIUtils.hideProgressView(view: self.view, animated: true)
-            UIUtils.showAlertViewwithTitle("Alert", andMessage: "Please authorize Crownit app to access your facebook detail for sucessful login.")
+            UIUtils.showAlertViewwithTitle("Alert", andMessage: "Please authorize TIL app to access your facebook detail for sucessful login.")
         }
 
         
@@ -712,7 +260,7 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
 //                let resultDictionary = response.responseDictionary
 //                
 //                
-//                UserManager.sharedInstance().user = CrownItUser()
+//                UserManager.sharedInstance().user = TILUser()
 //                
 //                if let socialId = resultDictionary["id"] as? String{
 //                    
@@ -769,11 +317,11 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
 //            UserManager.sharedInstance().user.socialAccount.fbFriendCount = NSNumber(value: -1 as Int)
 //        }
 //        
-//        UserManager.sharedInstance().fbRegistrationOnCrownit { (responseObject) -> Void in
+//        UserManager.sharedInstance().fbRegistrationOnTIL { (responseObject) -> Void in
 //            
 //            if (responseObject?.errorObject.isSuccessAtServer)! {
 //                
-//                if (UserManager.sharedInstance().user.userType == CrownItUserType.default && !(CommonFunctions.checkValue(forNullOrBlank: UserManager.sharedInstance().user.sessionId))){
+//                if (UserManager.sharedInstance().user.userType == TILUserType.default && !(CommonFunctions.checkValue(forNullOrBlank: UserManager.sharedInstance().user.sessionId))){
 //                    
 //                    self.dismissThisNav()
 //                    
@@ -819,16 +367,7 @@ class OnboardingViewController: CRBaseViewController, FBLoginButtonDelegate, UIS
             UIUtils.makeAlertBox("Something went wrong. Please check you are logged in to facebook and try again.", title: "Oops!", button1: "OK", button2: "", alertTag: 10, delegate: nil)
             
         }
-        
-        let count = Int(self.onboardingScrollView.contentOffset.x)/Int(SCREEN_WIDTH!)
-        
-        var onboardingType = "OldAnimated"
-        
-        if isTypeIOnboarding == false {
-            onboardingType = "NewStatic"
-        }
-        
-//        AppEventsHelper().track(onBoardingExit: count+1, totalScreens: 5, exitMethod: "Facebook", type: onboardingType)
+    
     }
     
     // delegate

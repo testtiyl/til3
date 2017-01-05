@@ -1,16 +1,19 @@
 //
 //  BaseDataModel.swift
-//  CrownIt
+//  til2
 //
-//  Created by Nikhil Bansal on 05/10/16.
-//  Copyright © 2016 GoldVIP Technology Solutions Private Limited. All rights reserved.
+//  Created by Hitesh Kumar on 27/05/16.
+//  Copyright © 2016 Hitesh Kumar. All rights reserved.
 //
 
 import UIKit
 
-import ObjectMapper
+//import ObjectMapper
 
+class BaseDataModel: NSObject {
+/*
 class BaseDataModel: NSObject, Mappable {
+
     
     let stringBoolTransform = TransformOf<Bool, String>(fromJSON: { (value: String?) -> Bool? in
 
@@ -105,4 +108,5 @@ class BaseDataModel: NSObject, Mappable {
     func parseData(json:String) -> BaseDataModel?{
         return self
     }
+ */
 }
