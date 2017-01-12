@@ -22,4 +22,8 @@ class UIConstants: NSObject {
             return "Registration"
         }
     }
+    
+    static let userImage = "user_male"
+    static let goal_dummy_image = "goalImage"
+    
 }

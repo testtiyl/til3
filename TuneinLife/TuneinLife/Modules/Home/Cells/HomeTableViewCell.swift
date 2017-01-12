@@ -1,9 +1,9 @@
 //
 //  HomeTableViewCell.swift
-//  til2
+//  TuneinLife
 //
-//  Created by Kanchan on 28/12/16.
-//  Copyright © 2016 Shyatoria. All rights reserved.
+//  Created by Kanchan on 12/01/17.
+//  Copyright © 2017 Shyatoria. All rights reserved.
 //
 
 import UIKit
@@ -11,20 +11,34 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var goalImageView: UIImageView!
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var goalTitleLbl: UILabel!
-    @IBOutlet weak var doneLbl: UILabel!
-    @IBOutlet weak var todoLbl: UILabel!
+    
+    @IBOutlet weak var titleLbl: UILabel!
+
+    @IBOutlet weak var todoBtn: UIButton!
+    @IBOutlet weak var doneBtn: UIButton!
+    @IBOutlet weak var userImage: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleLbl.text = ""
+        todoBtn.titleLabel?.text = "TODO: "
+        doneBtn.titleLabel?.text = "Done: "
+        userImage.imageView?.image = UIImage(named: UIConstants.userImage)
+        goalImageView.image = #imageLiteral(resourceName: "goalImage")
+        
+        let aspectRatio = (UIImage(named: UIConstants.userImage)?.size.height)!/(UIImage(named: UIConstants.userImage)?.size.width)!
+        
+        
+       goalImageView.frame =  CGRect(x: goalImageView.frame.origin.x, y: goalImageView.frame.origin.y, width: goalImageView.frame.size.width, height: goalImageView.bounds.width * aspectRatio)
+        
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+ 
+//    
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
+    
 }
