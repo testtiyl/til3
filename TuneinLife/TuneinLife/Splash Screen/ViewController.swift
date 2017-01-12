@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        showTip()
+        showTip()
 //        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.launchFbLogin), userInfo: nil, repeats: false)
         launchFbLogin()
     }

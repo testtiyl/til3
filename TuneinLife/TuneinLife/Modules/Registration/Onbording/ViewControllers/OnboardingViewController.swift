@@ -143,8 +143,10 @@ class OnboardingViewController: TILBaseViewController, FBLoginButtonDelegate, UI
         print("skip")
         
         let storyboard = UIStoryboard(name: UIConstants.getStoryboardIndentifier(.main), bundle: Bundle.main)
-        let vc:CategoriesViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesViewControllerID") as! CategoriesViewController
+        let vc:HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeViewController
+        
         self.navigationController?.pushViewController(vc, animated: true)
+        
         
 //        weak var weakSelf = self
 //        UIHelper.showLoaderView(self.view, animated: true)

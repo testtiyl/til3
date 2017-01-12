@@ -13,58 +13,28 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let goals:[Goal] = []
-    let cellIdentifier = "cartTableViewCell"
+    let kCellIdentifier = "homeTableViewCell"
 
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(true)
         self.fetchGoals()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        
+        self.navigationItem.title = "Home Screen"
     }
     
     func fetchGoals(){
     
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-}
-
-extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.goals.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 41 + 70
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:HomeTableViewCell  = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HomeTableViewCell
-        cell.goalTitleLbl.text = "goal test text"
-        cell.userImageView.image = #imageLiteral(resourceName: "user_male")
-        
-        let path: String? = Bundle.main.path(forResource: "goal_image", ofType: "jpg", inDirectory: "DirectoryName/Images")
-        let imageFromPath = UIImage(contentsOfFile: path!)!
-        cell.goalImageView.image = imageFromPath
-        
-        return cell
-        
-    }
-   
 }
 
