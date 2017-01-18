@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "0820"
+=======
+   LastUpgradeVersion = "0700"
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
+<<<<<<< HEAD
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
@@ -18,22 +23,45 @@
                BuildableName = "Alamofire.framework"
                BlueprintName = "Alamofire"
                ReferencedContainer = "container:Pods.xcodeproj">
+=======
+            buildForAnalyzing = "YES"
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES">
+            <BuildableReference
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = '88E9EC28B8B46C3631E6B242B50F4442'
+               BlueprintName = 'Alamofire'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'Alamofire.framework'>
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+<<<<<<< HEAD
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+=======
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+<<<<<<< HEAD
       buildConfiguration = "Debug"
+=======
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -41,6 +69,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
+<<<<<<< HEAD
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
@@ -51,10 +80,15 @@
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+=======
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+<<<<<<< HEAD
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
@@ -69,6 +103,13 @@
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+=======
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES"
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+>>>>>>> bd94694bd01d9cbebd2fb4f8a66bf8998c86f3c2
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

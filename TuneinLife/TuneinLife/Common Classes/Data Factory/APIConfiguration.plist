@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>getParticipants</key>
+	<dict>
+		<key>url</key>
+		<string>users/[id]/participants</string>
+		<key>cachePolicy</key>
+		<string>remote</string>
+		<key>cacheInterval</key>
+		<integer>0</integer>
+		<key>category</key>
+		<string>Weekly Rush</string>
+		<key>MethodType</key>
+		<string>GET</string>
+		<key>EncodingType</key>
+		<string>URL</string>
+		<key>isAuthHeaderRequired</key>
+		<true/>
+		<key>params</key>
+		<array/>
+	</dict>
+	<key>updateProfile</key>
+	<dict>
+		<key>url</key>
+		<string>/users/[user_id]/profile</string>
+		<key>cachePolicy</key>
+		<string>remote</string>
+		<key>cacheInterval</key>
+		<integer>1000</integer>
+		<key>category</key>
+		<string>home</string>
+		<key>MethodType</key>
+		<string>PUT</string>
+		<key>EncodingType</key>
+		<string>URL</string>
+		<key>isAuthHeaderRequired</key>
+		<true/>
+		<key>params</key>
+		<array/>
+	</dict>
+</dict>
+</plist>

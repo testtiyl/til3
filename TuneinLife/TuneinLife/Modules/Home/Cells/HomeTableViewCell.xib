@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeTableViewCell" rowHeight="339" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="TuneinLife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="339"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="338.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="goalImage" translatesAutoresizingMaskIntoConstraints="NO" id="Gix-qy-HW8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="272.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3N-Dq-i8d">
+                        <rect key="frame" x="42" y="278.5" width="270" height="20"/>
+                        <color key="backgroundColor" red="1" green="0.54637925262141529" blue="0.82298538629942686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="tce-3W-R93"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC0-QC-3pR">
+                        <rect key="frame" x="0.0" y="272.5" width="42" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="HbV-a0-5dL"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="user_male"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-eG-7BX">
+                        <rect key="frame" x="0.0" y="300.5" width="160" height="30"/>
+                        <color key="backgroundColor" red="0.32432604582859348" green="1" blue="0.13804806996065155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Done:"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCq-6B-c6s">
+                        <rect key="frame" x="160" y="300.5" width="160" height="30"/>
+                        <color key="backgroundColor" red="0.76685967136270983" green="1" blue="0.84671927608391973" alpha="0.14683219178082191" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="bJO-Va-K5b"/>
+                        </constraints>
+                        <state key="normal" title="TODO: "/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Gix-qy-HW8" secondAttribute="trailing" id="036-Fg-8W9"/>
+                    <constraint firstItem="g3N-Dq-i8d" firstAttribute="top" secondItem="jC0-QC-3pR" secondAttribute="top" constant="6" id="1aV-Dc-Dmh"/>
+                    <constraint firstItem="RCq-6B-c6s" firstAttribute="height" secondItem="Bqh-eG-7BX" secondAttribute="height" id="ByT-px-GbW"/>
+                    <constraint firstItem="RCq-6B-c6s" firstAttribute="leading" secondItem="Bqh-eG-7BX" secondAttribute="trailing" id="DDn-hi-CtD"/>
+                    <constraint firstItem="RCq-6B-c6s" firstAttribute="width" secondItem="Bqh-eG-7BX" secondAttribute="width" id="Eyp-iu-bKd"/>
+                    <constraint firstItem="RCq-6B-c6s" firstAttribute="top" secondItem="g3N-Dq-i8d" secondAttribute="bottom" constant="2" id="H67-Yw-fmR"/>
+                    <constraint firstItem="Bqh-eG-7BX" firstAttribute="top" secondItem="RCq-6B-c6s" secondAttribute="top" id="PjY-6P-luU"/>
+                    <constraint firstItem="jC0-QC-3pR" firstAttribute="top" secondItem="Gix-qy-HW8" secondAttribute="bottom" id="QgH-YS-5zw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="g3N-Dq-i8d" secondAttribute="trailing" id="R5q-KW-h9L"/>
+                    <constraint firstItem="jC0-QC-3pR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="kd5-5Z-EGH"/>
+                    <constraint firstItem="Gix-qy-HW8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mK6-Xa-05K"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RCq-6B-c6s" secondAttribute="trailing" constant="-8" id="ooh-ed-vGt"/>
+                    <constraint firstItem="g3N-Dq-i8d" firstAttribute="leading" secondItem="jC0-QC-3pR" secondAttribute="trailing" id="rcu-j4-hUV"/>
+                    <constraint firstItem="Bqh-eG-7BX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="tW6-Pi-yjR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Bqh-eG-7BX" secondAttribute="bottom" id="vXK-Cs-Odc"/>
+                    <constraint firstItem="Gix-qy-HW8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zhJ-PS-65s"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="doneBtn" destination="Bqh-eG-7BX" id="dyD-Q4-j4p"/>
+                <outlet property="goalImageView" destination="Gix-qy-HW8" id="MEu-p3-NaV"/>
+                <outlet property="titleLbl" destination="g3N-Dq-i8d" id="2G0-gC-UoP"/>
+                <outlet property="todoBtn" destination="RCq-6B-c6s" id="q22-pA-dSk"/>
+                <outlet property="userImage" destination="jC0-QC-3pR" id="B5g-aM-S9J"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="172.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="goalImage" width="2464" height="1632"/>
+        <image name="user_male" width="25" height="25"/>
+    </resources>
+</document>
