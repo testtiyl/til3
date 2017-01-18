@@ -241,15 +241,19 @@
 				TargetAttributes = {
 					0C93D70F1E1AAB93001E2B7A = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = N9NTXP3YLW;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					0C93D7231E1AAB93001E2B7A = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C93D70F1E1AAB93001E2B7A;
 					};
 					0C93D72E1E1AAB93001E2B7A = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C93D70F1E1AAB93001E2B7A;
 					};
@@ -584,6 +588,7 @@
 			baseConfigurationReference = 3AFACEE958FD81DC40FC77A8 /* Pods-TuneinLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9NTXP3YLW;
 				INFOPLIST_FILE = TuneinLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shyatoria.TuneinLife;
@@ -597,6 +602,7 @@
 			baseConfigurationReference = D16EED16597B8F26EC257D1A /* Pods-TuneinLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9NTXP3YLW;
 				INFOPLIST_FILE = TuneinLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shyatoria.TuneinLife;
