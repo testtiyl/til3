@@ -40,36 +40,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dub-1S-8rs">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sDm-zc-b4b">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeTableViewCell" id="0U9-Ot-bDA" customClass="HomeTableViewCell" customModule="TuneinLife" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0U9-Ot-bDA" id="WsS-RD-zjd">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Igx-yd-TpE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jvt-mG-2IT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Pef-Xi-kAh"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ioY-mh-rew"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dGi-Yi-IXi"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OcV-7e-hcN"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Dub-1S-8rs" secondAttribute="trailing" id="HMz-Qo-bVM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dub-1S-8rs" secondAttribute="bottom" id="PsR-pm-awB"/>
-                            <constraint firstItem="Dub-1S-8rs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eZO-iA-Abw"/>
-                            <constraint firstItem="Dub-1S-8rs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sBq-Wc-7WX"/>
+                            <constraint firstAttribute="bottom" secondItem="sDm-zc-b4b" secondAttribute="bottom" id="HSG-8g-YN4"/>
+                            <constraint firstAttribute="trailing" secondItem="sDm-zc-b4b" secondAttribute="trailing" id="Iw1-If-BvA"/>
+                            <constraint firstItem="sDm-zc-b4b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lRV-7t-jLb"/>
+                            <constraint firstItem="sDm-zc-b4b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oaf-Ig-wm5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fj8-cG-5Eq"/>
                     <connections>
-                        <outlet property="tableView" destination="Dub-1S-8rs" id="PjO-Uy-CGv"/>
+                        <outlet property="collectionView" destination="sDm-zc-b4b" id="0z5-eZ-Tme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -269,6 +275,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jg3-js-NUe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Spd-DW-man">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

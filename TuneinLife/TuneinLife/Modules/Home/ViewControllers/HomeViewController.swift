@@ -10,11 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
     let goals:[Goal] = []
     let kCellIdentifier = "homeTableViewCell"
-
+    let kCollectionViewCellIdentifier = "homeCollectionViewCell"
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -25,14 +25,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Home Screen"
-        let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: kCellIdentifier)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        let nib = UINib(nibName: "HomeCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: kCollectionViewCellIdentifier)
         
-        tableView.estimatedRowHeight = 50
+//        tableView.register(nib, forCellReuseIdentifier: kCellIdentifier)
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 50
         
 //        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
-
+        
     }
     
     func fetchGoals(){
@@ -46,23 +47,28 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let goalCell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as? HomeTableViewCell
-       goalCell?.goalImageView.image = #imageLiteral(resourceName: "goalImage")
-       goalCell?.userImage.imageView?.image = #imageLiteral(resourceName: "user_male")
-       goalCell?.todoBtn.titleLabel?.text = "todo: count"
-       goalCell?.doneBtn.titleLabel?.text = "done: count"
-        goalCell?.titleLbl.text = "learn skating in shimla this winter. visit north east india."
-        return goalCell!
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        
+//        let goals:[Goal] = Goal.staticGoals()
+//        return goals.count
+//        
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        let goalCell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as? HomeTableViewCell
+//        let goal = Goal.staticGoals()[indexPath.row] as Goal
+//        
+//       goalCell?.goalImageView.image = goal.imageURL
+//       goalCell?.userImage.imageView?.image = goal.user_imgURL
+//       goalCell?.todoBtn.titleLabel?.text = String(goal.todo)
+//       goalCell?.doneBtn.titleLabel?.text = String( goal.done)
+//       goalCell?.titleLbl.text = goal.title
+//        
+//       return goalCell!
+//    }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return UITableViewAutomaticDimension
@@ -72,4 +78,21 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
 //        
 //        return 50
 //    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let goals: [Goal] = Goal.staticGoals()
+        return goals.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let goal = Goal.staticGoals()[indexPath.row] as Goal
+        let goalCell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
+        goalCell.imageView.image = goal.imageURL
+        goalCell.userImageView.image = goal.user_imgURL
+        goalCell.goalTitle.text = goal.title
+        goalCell.userName.text = goal.author
+        
+        return goalCell
+    }
 }
