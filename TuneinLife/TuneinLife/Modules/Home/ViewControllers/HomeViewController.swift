@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        
@@ -79,20 +79,39 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
 //        return 50
 //    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        var size = CGSize()
+        guard let goal: Goal = Goals().goalForItemAtIndexPath(indexPath: indexPath)  else {
+            //show some error message.
+            return CGSize()
+        }
+        size.width = UIScreen.main.bounds.width/2 - 10  // 10 for spacing
+        size.height = goal.goalImage.size.height*size.width/goal.goalImage.size.width - 10
+        return size
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let goals: [Goal] = Goal.staticGoals()
-        return goals.count
+           
+        return Goals().getSectionCount()
     }
     
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let goal = Goal.staticGoals()[indexPath.row] as Goal
-        let goalCell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
-        goalCell.imageView.image = goal.imageURL
-        goalCell.userImageView.image = goal.user_imgURL
-        goalCell.goalTitle.text = goal.title
-        goalCell.userName.text = goal.author
-        
-        return goalCell
+        if let goal = Goals().goalForItemAtIndexPath(indexPath: indexPath) {
+            
+            let goalCell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
+            goalCell.imageView.image = goal.goalImage
+            goalCell.userImageView.image = goal.user_imgURL
+            goalCell.goalTitle.text = goal.title
+            goalCell.userName.text = goal.author
+            
+            goalCell.layer.borderWidth = 1
+            goalCell.layer.borderColor = UIColor.black.cgColor
+            
+            return goalCell
+        }
+        //TODO : what to do here if goal is nil or cell is nil
+        return UICollectionViewCell()
     }
 }
