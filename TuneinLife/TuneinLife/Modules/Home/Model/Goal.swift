@@ -73,7 +73,25 @@ class Goals {
         goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "goalImage"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "pencil"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "pooh2"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
         goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "cake"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        
+        allGoals.append(goal)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "coffee-1"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
         goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
@@ -82,31 +100,13 @@ class Goals {
         goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "goalImage"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
         goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
-        
-        allGoals.append(goal)
-        goal  = Goal(imageName: #imageLiteral(resourceName: "frog"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
+        goal  = Goal(imageName: #imageLiteral(resourceName: "pooh2"), user_img: #imageLiteral(resourceName: "user_male"), title: "Jumping japak jumping japak ", author: "batman broh.. :D", todo:4555 , done: 100000)
         
         allGoals.append(goal)
         
