@@ -28,6 +28,11 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: "HomeCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: kCollectionViewCellIdentifier)
         
+        if let layout = collectionView?.collectionViewLayout as? GridCVLayout {
+            
+            layout.delegate = self
+        }
+        
 //        tableView.register(nib, forCellReuseIdentifier: kCellIdentifier)
 //        tableView.rowHeight = UITableViewAutomaticDimension
 //        tableView.estimatedRowHeight = 50
@@ -46,6 +51,44 @@ class HomeViewController: UIViewController {
         
     }
 }
+
+extension HomeViewController : GridLayoutDelegate {
+    // 1
+    @objc(collectionViewWithCollectionView:heightForGoalImageAtIndexPath:withWidth:) func collectionView(collectionView:UICollectionView, heightForGoalImageAtIndexPath indexPath:IndexPath,
+                        withWidth width:CGFloat) -> CGFloat {
+        
+        if let goal = Goals().goalForItemAtIndexPath(indexPath: indexPath) {
+            
+            let photo = goal.goalImage
+            return (photo.size.height * width)/photo.size.width
+        }
+            return 0.0
+    }
+    
+    // 2
+    @objc(collectionViewWithCollectionView:heightForGoalDetailsAtIndexPath:withWidth:) func collectionView(collectionView: UICollectionView,
+                                                                                                           heightForGoalDetailsAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
+        
+        
+        
+        
+        
+        if let goal = Goals().goalForItemAtIndexPath(indexPath: indexPath) {
+            
+            let photo = goal.goalImage
+            
+            let annotationPadding = CGFloat(4)
+            let annotationHeaderHeight = CGFloat(17)
+            let font = UIFont(name: "AvenirNext-Regular", size: 13)!
+            let commentHeight = CGFloat(50) //photo.heightForComment(font, width: width)
+            let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
+            return height
+        }
+        return 0.0
+        
+    }
+}
+
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
