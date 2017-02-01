@@ -47,4 +47,13 @@ enum APIType:String{
 
         }
     }
+    struct CategoryAPIConstants {
+    
+        static let catName = "catName"
+        static let catCount = "catCount"
+        static let catImage = "catImage"
+        static let catDate = "catDate"
+    }
+    
+    
 }

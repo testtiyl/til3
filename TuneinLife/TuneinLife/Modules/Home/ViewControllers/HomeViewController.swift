@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let goals:[Goal] = []
     let kCellIdentifier = "homeTableViewCell"
-    let kCollectionViewCellIdentifier = "homeCollectionViewCell"
+    let kCollectionViewCellIdentifier = UIConstants.CellIdentifiers.kHomeCellIdentifier
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -24,8 +24,8 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Home Screen"
-        let nib = UINib(nibName: "HomeCollectionViewCell", bundle: nil)
+        self.navigationItem.title = UIConstants.NavTitles.kHomeNavTitle
+        let nib = UINib(nibName: UIConstants.NibNames.kHomeCellNib, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: kCollectionViewCellIdentifier)
         
         if let layout = collectionView?.collectionViewLayout as? GridCVLayout {

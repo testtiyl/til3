@@ -12,7 +12,20 @@ class GoalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /*
+        let button = CustomSquareButton(type: .system)
+        button.setTitle("Button", for: .normal)
+        view.addSubview(button)
+        
+        // Auto layout code using anchors (iOS9+)
+        // set witdh and height constraints if necessary
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint = button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let verticalConstraint = button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        let widthConstraint = button.widthAnchor.constraint(equalToConstant: 100)
+        let heightConstraint = button.heightAnchor.constraint(equalToConstant: 100)
+        NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+        */
         // Do any additional setup after loading the view.
     }
 

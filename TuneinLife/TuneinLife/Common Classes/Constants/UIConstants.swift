@@ -25,5 +25,28 @@ class UIConstants: NSObject {
     
     static let userImage = "user_male"
     static let goal_dummy_image = "goalImage"
+
+    
+    
+    struct NibNames {
+        
+        static var kCategoriesCellNib = "CategoryCollectionViewCell"
+        static var kHomeCellNib = "HomeCollectionViewCell"
+    }
+
+    struct CellIdentifiers {
+    
+        static var kCategoryCellIdentifier = "categoryCollectionViewCell"
+        static var kHomeCellIdentifier = "homeCollectionViewCell"
+        
+    }
+    
+    struct NavTitles {
+    
+        static var kHomeNavTitle = "Goals around the globe"
+        static var kCategoriesNavTitle = "Select categories"
+    
+    }
     
 }
+
