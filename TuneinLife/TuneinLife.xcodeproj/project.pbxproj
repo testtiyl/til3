@@ -12,6 +12,7 @@
 		0C0C21481E27A49200F50603 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C21461E27A49200F50603 /* HomeTableViewCell.swift */; };
 		0C0C21491E27A49200F50603 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C21471E27A49200F50603 /* HomeTableViewCell.xib */; };
 		0C3C1F7B1E41E0520046FAE7 /* CustomSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C1F7A1E41E0520046FAE7 /* CustomSquareView.swift */; };
+		0C3C1F7D1E4255050046FAE7 /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C1F7C1E4255050046FAE7 /* CreateGoalViewController.swift */; };
 		0C42091A1E1ABD4500BB220D /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C4209121E1ABD4500BB220D /* example.json */; };
 		0C5388821E31390300DA5C67 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5388801E31390300DA5C67 /* HomeCollectionViewCell.swift */; };
 		0C5388831E31390300DA5C67 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5388811E31390300DA5C67 /* HomeCollectionViewCell.xib */; };
@@ -103,6 +104,7 @@
 		0C0C21461E27A49200F50603 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		0C0C21471E27A49200F50603 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		0C3C1F7A1E41E0520046FAE7 /* CustomSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSquareView.swift; path = TuneinLife/Modules/Categories/CustomSquareView.swift; sourceTree = SOURCE_ROOT; };
+		0C3C1F7C1E4255050046FAE7 /* CreateGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGoalViewController.swift; path = TuneinLife/Modules/Categories/CreateGoalViewController.swift; sourceTree = SOURCE_ROOT; };
 		0C4209121E1ABD4500BB220D /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		0C5388801E31390300DA5C67 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C5388811E31390300DA5C67 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 		67C813431E1DD34000B4B129 /* UIResources */ = {
 			isa = PBXGroup;
 			children = (
+				0C3C1F7C1E4255050046FAE7 /* CreateGoalViewController.swift */,
 			);
 			path = UIResources;
 			sourceTree = "<group>";
@@ -1105,6 +1108,7 @@
 				67C813B41E1DD34000B4B129 /* UserManager.swift in Sources */,
 				67C8138E1E1DD34000B4B129 /* UIColorExtension.swift in Sources */,
 				67C813841E1DD34000B4B129 /* APIResponseModel.swift in Sources */,
+				0C3C1F7D1E4255050046FAE7 /* CreateGoalViewController.swift in Sources */,
 				67C813A71E1DD34000B4B129 /* OnboardingTypeModel.swift in Sources */,
 				0C5388821E31390300DA5C67 /* HomeCollectionViewCell.swift in Sources */,
 				67C8138B1E1DD34000B4B129 /* DictionaryExtension.swift in Sources */,
