@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0B6C9DA0A04A80F4DD34AB32 /* Pods_TuneinLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFB461BE56226256147C3A1 /* Pods_TuneinLifeUITests.framework */; };
-		0C056C141E2FB4330011ADB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C056C131E2FB4330011ADB0 /* Assets.xcassets */; };
 		0C0C21481E27A49200F50603 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C21461E27A49200F50603 /* HomeTableViewCell.swift */; };
 		0C0C21491E27A49200F50603 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C21471E27A49200F50603 /* HomeTableViewCell.xib */; };
 		0C3C1F7B1E41E0520046FAE7 /* CustomSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C1F7A1E41E0520046FAE7 /* CustomSquareView.swift */; };
 		0C3C1F7D1E4255050046FAE7 /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C1F7C1E4255050046FAE7 /* CreateGoalViewController.swift */; };
 		0C42091A1E1ABD4500BB220D /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C4209121E1ABD4500BB220D /* example.json */; };
+		0C4E05BD1E530F0400F51662 /* FbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E05BB1E530F0400F51662 /* FbLoginViewController.swift */; };
+		0C4E05BE1E530F0400F51662 /* FbLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E05BC1E530F0400F51662 /* FbLoginViewController.xib */; };
+		0C4E05C01E5347CE00F51662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E05BF1E5347CE00F51662 /* Assets.xcassets */; };
+		0C4E05C21E545DF200F51662 /* PagagraphUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E05C11E545DF200F51662 /* PagagraphUILabel.swift */; };
 		0C5388821E31390300DA5C67 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5388801E31390300DA5C67 /* HomeCollectionViewCell.swift */; };
 		0C5388831E31390300DA5C67 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5388811E31390300DA5C67 /* HomeCollectionViewCell.xib */; };
 		0C5388851E32438800DA5C67 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5388841E32438800DA5C67 /* Goal.swift */; };
@@ -80,6 +83,9 @@
 		67C813B71E1DD34000B4B129 /* SplashTips.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C813781E1DD34000B4B129 /* SplashTips.xib */; };
 		67C813B81E1DD34000B4B129 /* SplashTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C813791E1DD34000B4B129 /* SplashTipsView.swift */; };
 		67C813B91E1DD34000B4B129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8137A1E1DD34000B4B129 /* ViewController.swift */; };
+		78A163FD53B5D9897C5D91F8 /* Pods_TuneinLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25022F4CD460B0E7A1BA632D /* Pods_TuneinLife.framework */; };
+		97AA50DAE1DE7ED7A5EED91E /* Pods_TuneinLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD80A4AD96439205E14A1F /* Pods_TuneinLifeTests.framework */; };
+		995EFF01EAC54B01045A3614 /* Pods_TuneinLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E322112B2616F6B2D6D8AF12 /* Pods_TuneinLifeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,12 +106,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C056C131E2FB4330011ADB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0C21461E27A49200F50603 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		0C0C21471E27A49200F50603 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		0C3C1F7A1E41E0520046FAE7 /* CustomSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSquareView.swift; path = TuneinLife/Modules/Categories/CustomSquareView.swift; sourceTree = SOURCE_ROOT; };
 		0C3C1F7C1E4255050046FAE7 /* CreateGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGoalViewController.swift; path = TuneinLife/Modules/Categories/CreateGoalViewController.swift; sourceTree = SOURCE_ROOT; };
 		0C4209121E1ABD4500BB220D /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
+		0C4E05BB1E530F0400F51662 /* FbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FbLoginViewController.swift; path = Login/FbLoginViewController.swift; sourceTree = "<group>"; };
+		0C4E05BC1E530F0400F51662 /* FbLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FbLoginViewController.xib; path = Login/FbLoginViewController.xib; sourceTree = "<group>"; };
+		0C4E05BF1E5347CE00F51662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C4E05C11E545DF200F51662 /* PagagraphUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagagraphUILabel.swift; path = "TuneinLife/Common Classes/UI Views/PagagraphUILabel.swift"; sourceTree = SOURCE_ROOT; };
 		0C5388801E31390300DA5C67 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C5388811E31390300DA5C67 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		0C5388841E32438800DA5C67 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Goal.swift; path = TuneinLife/Modules/Home/Model/Goal.swift; sourceTree = SOURCE_ROOT; };
@@ -126,8 +135,11 @@
 		0CE181D51E38C41200A2DC63 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCollectionViewCell.swift; path = TuneinLife/Modules/Categories/CategoryCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		0CE181D61E38C41200A2DC63 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = TuneinLife/Modules/Categories/CategoryCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		0CE181D91E40D6E700A2DC63 /* CustomSquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSquareButton.swift; path = TuneinLife/Modules/Categories/CustomSquareButton.swift; sourceTree = SOURCE_ROOT; };
+		25022F4CD460B0E7A1BA632D /* Pods_TuneinLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACE833DDE10BC78BD1460AB /* Pods-TuneinLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLife/Pods-TuneinLife.release.xcconfig"; sourceTree = "<group>"; };
 		4C460E5CE0CDADFF460B5653 /* Pods_TuneinLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AD80A4AD96439205E14A1F /* Pods_TuneinLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F865ACADAB26252D38FC4B0 /* Pods-TuneinLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeTests/Pods-TuneinLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67C813091E1DD34000B4B129 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		67C8130B1E1DD34000B4B129 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		67C8130C1E1DD34000B4B129 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -178,12 +190,18 @@
 		67C813781E1DD34000B4B129 /* SplashTips.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashTips.xib; sourceTree = "<group>"; };
 		67C813791E1DD34000B4B129 /* SplashTipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashTipsView.swift; sourceTree = "<group>"; };
 		67C8137A1E1DD34000B4B129 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		698EAD2CB9315850474263C6 /* Pods-TuneinLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeTests/Pods-TuneinLifeTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C47B59669226CA43986C752 /* Pods-TuneinLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeTests/Pods-TuneinLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D5A95EB6681BABF81EF00FD /* Pods-TuneinLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLife/Pods-TuneinLife.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC1AB568F1C3AF1FF571157 /* Pods_TuneinLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E08EE0E257949321D09B39 /* Pods-TuneinLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLife/Pods-TuneinLife.release.xcconfig"; sourceTree = "<group>"; };
 		C6F637EC4F683AF78A5A6B52 /* Pods-TuneinLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeUITests/Pods-TuneinLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0E8B7732967FBC6CDB9995E /* Pods-TuneinLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeUITests/Pods-TuneinLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEFB461BE56226256147C3A1 /* Pods_TuneinLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E322112B2616F6B2D6D8AF12 /* Pods_TuneinLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuneinLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CEACBD3FB2479F282393E7 /* Pods-TuneinLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeUITests/Pods-TuneinLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E986A3C7DC877EE9D4C53F25 /* Pods-TuneinLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeTests/Pods-TuneinLifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F22ED3BD12EED75607957078 /* Pods-TuneinLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLifeUITests/Pods-TuneinLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FFA2C36F70CFA19C4BE83863 /* Pods-TuneinLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuneinLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuneinLife/Pods-TuneinLife.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3245D0DD6E1350D45D9975B4 /* Pods_TuneinLife.framework in Frameworks */,
+				78A163FD53B5D9897C5D91F8 /* Pods_TuneinLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B1AF25CBBE17BBFAD72415 /* Pods_TuneinLifeTests.framework in Frameworks */,
+				97AA50DAE1DE7ED7A5EED91E /* Pods_TuneinLifeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6C9DA0A04A80F4DD34AB32 /* Pods_TuneinLifeUITests.framework in Frameworks */,
+				995EFF01EAC54B01045A3614 /* Pods_TuneinLifeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,20 +239,40 @@
 		0C4209241E1ABDA300BB220D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C4E05BF1E5347CE00F51662 /* Assets.xcassets */,
 				0C4209121E1ABD4500BB220D /* example.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		0C4E05B81E530DE600F51662 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				C8A369EC42DF6693D4032DD6 /* Frameworks */,
+				993C48A02C109B4548D34214 /* Pods */,
+				0C93D7111E1AAB93001E2B7A /* Products */,
+				0C93D7271E1AAB93001E2B7A /* TuneinLifeTests */,
+				0C93D7321E1AAB93001E2B7A /* TuneinLifeUITests */,
+			);
+			name = Extra;
+			sourceTree = "<group>";
+		};
+		0C4E05BA1E530ED900F51662 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0C4E05BB1E530F0400F51662 /* FbLoginViewController.swift */,
+				0C4E05BC1E530F0400F51662 /* FbLoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		0C93D7071E1AAB93001E2B7A = {
 			isa = PBXGroup;
 			children = (
+				0C4E05B81E530DE600F51662 /* Extra */,
 				0C93D7121E1AAB93001E2B7A /* TuneinLife */,
-				0C93D7271E1AAB93001E2B7A /* TuneinLifeTests */,
-				0C93D7321E1AAB93001E2B7A /* TuneinLifeUITests */,
-				0C93D7111E1AAB93001E2B7A /* Products */,
-				993C48A02C109B4548D34214 /* Pods */,
-				C8A369EC42DF6693D4032DD6 /* Frameworks */,
+				E3A6EF4BB7ADB6C0F787BF67 /* Pods */,
+				723E374F7C17000DBED8FBF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,11 +295,8 @@
 				0C93D7171E1AAB93001E2B7A /* Main.storyboard */,
 				0C93D71C1E1AAB93001E2B7A /* LaunchScreen.storyboard */,
 				0C93D71F1E1AAB93001E2B7A /* Info.plist */,
-				0C056C131E2FB4330011ADB0 /* Assets.xcassets */,
 				0C4209241E1ABDA300BB220D /* Resources */,
-				67C8137B1E1DD34000B4B129 /* Supporting Files */,
 				67C813761E1DD34000B4B129 /* Splash Screen */,
-				67C813381E1DD34000B4B129 /* Libraries */,
 			);
 			path = TuneinLife;
 			sourceTree = "<group>";
@@ -284,9 +322,9 @@
 		67C813071E1DD34000B4B129 /* Common Classes */ = {
 			isa = PBXGroup;
 			children = (
+				67C8130F1E1DD34000B4B129 /* Data Factory */,
 				67C813081E1DD34000B4B129 /* CommonViews */,
 				67C8130A1E1DD34000B4B129 /* Constants */,
-				67C8130F1E1DD34000B4B129 /* Data Factory */,
 				67C8131B1E1DD34000B4B129 /* Deeplink */,
 				67C8131C1E1DD34000B4B129 /* Extension */,
 				67C813221E1DD34000B4B129 /* Facebook */,
@@ -412,6 +450,7 @@
 			children = (
 				0CE181D91E40D6E700A2DC63 /* CustomSquareButton.swift */,
 				0C3C1F7A1E41E0520046FAE7 /* CustomSquareView.swift */,
+				0C4E05C11E545DF200F51662 /* PagagraphUILabel.swift */,
 			);
 			name = "UI Views";
 			path = UIConstants;
@@ -430,23 +469,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		67C813381E1DD34000B4B129 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
 		67C813391E1DD34000B4B129 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0C4E05BA1E530ED900F51662 /* Login */,
 				67C8133A1E1DD34000B4B129 /* Categories */,
 				67C813401E1DD34000B4B129 /* Goals */,
 				67C813471E1DD34000B4B129 /* Home */,
-				67C813511E1DD34000B4B129 /* Invite */,
-				67C813561E1DD34000B4B129 /* Login */,
-				67C813571E1DD34000B4B129 /* More */,
-				67C813581E1DD34000B4B129 /* Profile */,
 				67C813591E1DD34000B4B129 /* Registration */,
 				67C813711E1DD34000B4B129 /* TILBaseViewController.swift */,
 				67C813721E1DD34000B4B129 /* User Manager */,
@@ -501,19 +530,10 @@
 		67C813401E1DD34000B4B129 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				67C813411E1DD34000B4B129 /* Models */,
 				67C813431E1DD34000B4B129 /* UIResources */,
 				67C813441E1DD34000B4B129 /* ViewControllers */,
-				67C813461E1DD34000B4B129 /* Views */,
 			);
 			path = Goals;
-			sourceTree = "<group>";
-		};
-		67C813411E1DD34000B4B129 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		67C813431E1DD34000B4B129 /* UIResources */ = {
@@ -530,13 +550,6 @@
 				67C813451E1DD34000B4B129 /* GoalsViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		67C813461E1DD34000B4B129 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		67C813471E1DD34000B4B129 /* Home */ = {
@@ -593,66 +606,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		67C813511E1DD34000B4B129 /* Invite */ = {
-			isa = PBXGroup;
-			children = (
-				67C813521E1DD34000B4B129 /* Models */,
-				67C813531E1DD34000B4B129 /* UIResources */,
-				67C813541E1DD34000B4B129 /* ViewControllers */,
-				67C813551E1DD34000B4B129 /* Views */,
-			);
-			path = Invite;
-			sourceTree = "<group>";
-		};
-		67C813521E1DD34000B4B129 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		67C813531E1DD34000B4B129 /* UIResources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIResources;
-			sourceTree = "<group>";
-		};
-		67C813541E1DD34000B4B129 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		67C813551E1DD34000B4B129 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		67C813561E1DD34000B4B129 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		67C813571E1DD34000B4B129 /* More */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		67C813581E1DD34000B4B129 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		67C813591E1DD34000B4B129 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,18 +618,9 @@
 		67C8135A1E1DD34000B4B129 /* FBRegistration */ = {
 			isa = PBXGroup;
 			children = (
-				67C8135B1E1DD34000B4B129 /* Models */,
 				67C8135C1E1DD34000B4B129 /* UIResources */,
-				67C8135E1E1DD34000B4B129 /* ViewControllers */,
 			);
 			path = FBRegistration;
-			sourceTree = "<group>";
-		};
-		67C8135B1E1DD34000B4B129 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		67C8135C1E1DD34000B4B129 /* UIResources */ = {
@@ -685,13 +629,6 @@
 				67C8135D1E1DD34000B4B129 /* Registration.storyboard */,
 			);
 			path = UIResources;
-			sourceTree = "<group>";
-		};
-		67C8135E1E1DD34000B4B129 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		67C8135F1E1DD34000B4B129 /* Onbording */ = {
@@ -757,11 +694,14 @@
 			path = "Splash Screen";
 			sourceTree = "<group>";
 		};
-		67C8137B1E1DD34000B4B129 /* Supporting Files */ = {
+		723E374F7C17000DBED8FBF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25022F4CD460B0E7A1BA632D /* Pods_TuneinLife.framework */,
+				50AD80A4AD96439205E14A1F /* Pods_TuneinLifeTests.framework */,
+				E322112B2616F6B2D6D8AF12 /* Pods_TuneinLifeUITests.framework */,
 			);
-			path = "Supporting Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		993C48A02C109B4548D34214 /* Pods */ = {
@@ -785,6 +725,19 @@
 				DEFB461BE56226256147C3A1 /* Pods_TuneinLifeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3A6EF4BB7ADB6C0F787BF67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D5A95EB6681BABF81EF00FD /* Pods-TuneinLife.debug.xcconfig */,
+				94E08EE0E257949321D09B39 /* Pods-TuneinLife.release.xcconfig */,
+				5F865ACADAB26252D38FC4B0 /* Pods-TuneinLifeTests.debug.xcconfig */,
+				698EAD2CB9315850474263C6 /* Pods-TuneinLifeTests.release.xcconfig */,
+				E8CEACBD3FB2479F282393E7 /* Pods-TuneinLifeUITests.debug.xcconfig */,
+				F22ED3BD12EED75607957078 /* Pods-TuneinLifeUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -910,6 +863,8 @@
 				0C53888E1E37592A00DA5C67 /* CategoriesData.plist in Resources */,
 				0C42091A1E1ABD4500BB220D /* example.json in Resources */,
 				0C93D71E1E1AAB93001E2B7A /* LaunchScreen.storyboard in Resources */,
+				0C4E05BE1E530F0400F51662 /* FbLoginViewController.xib in Resources */,
+				0C4E05C01E5347CE00F51662 /* Assets.xcassets in Resources */,
 				67C813A61E1DD34000B4B129 /* Registration.storyboard in Resources */,
 				67C813A81E1DD34000B4B129 /* OnboardingTypeII.xib in Resources */,
 				67C813931E1DD34000B4B129 /* FBWebViewController.xib in Resources */,
@@ -919,7 +874,6 @@
 				0C5388831E31390300DA5C67 /* HomeCollectionViewCell.xib in Resources */,
 				67C813B71E1DD34000B4B129 /* SplashTips.xib in Resources */,
 				0C0C21491E27A49200F50603 /* HomeTableViewCell.xib in Resources */,
-				0C056C141E2FB4330011ADB0 /* Assets.xcassets in Resources */,
 				0C93D7191E1AAB93001E2B7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1117,7 +1071,9 @@
 				67C813991E1DD34000B4B129 /* AppEventUtils.swift in Sources */,
 				67C813B01E1DD34000B4B129 /* OnboardingType2View.swift in Sources */,
 				67C813B51E1DD34000B4B129 /* UserModel.swift in Sources */,
+				0C4E05C21E545DF200F51662 /* PagagraphUILabel.swift in Sources */,
 				67C813A91E1DD34000B4B129 /* OnboardingViewController.swift in Sources */,
+				0C4E05BD1E530F0400F51662 /* FbLoginViewController.swift in Sources */,
 				67C8139E1E1DD34000B4B129 /* ValidationUtils.swift in Sources */,
 				0C5388881E3672AD00DA5C67 /* GridCVLayout.swift in Sources */,
 				67C813891E1DD34000B4B129 /* APIUtil.swift in Sources */,

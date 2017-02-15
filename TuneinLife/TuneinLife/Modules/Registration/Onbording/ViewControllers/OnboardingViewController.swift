@@ -62,7 +62,6 @@ class OnboardingViewController: TILBaseViewController, FBLoginButtonDelegate, UI
         
     }
     
-    
     internal func updateDeviceInfo(){
 //        DeviceManager.sharedInstance().updateUserDeviceData { (response) in
 //    }

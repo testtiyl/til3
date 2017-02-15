@@ -25,7 +25,7 @@ class UIConstants: NSObject {
     
     static let userImage = "user_male"
     static let goal_dummy_image = "goalImage"
-
+    static let default_paragraph_font = UIFont(name: "Avenir Next Regular", size: 15.0)
     
     
     struct NibNames {
@@ -47,6 +47,8 @@ class UIConstants: NSObject {
         static var kCategoriesNavTitle = "Select categories"
     
     }
+    
+    
     
 }
 

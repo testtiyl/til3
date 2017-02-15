@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FbLoginViewController" customModule="TuneinLife" customModuleProvider="target">
+            <connections>
+                <outlet property="fbLoginBtn" destination="MXS-nt-Psf" id="CFV-Z8-srd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will never post without your permission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuF-9b-sGH">
+                    <rect key="frame" x="73" y="296" width="229.5" height="14"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsq-h4-aGz">
+                    <rect key="frame" x="129" y="609" width="117" height="29"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <state key="normal" title="Skip login for now">
+                        <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXS-nt-Psf" customClass="FBSDKLoginButton">
+                    <rect key="frame" x="80" y="212" width="222" height="43"/>
+                    <color key="backgroundColor" red="0.29592281579971313" green="0.43029037117958069" blue="0.66269487142562866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="M07-Vr-NeS"/>
+                        <constraint firstAttribute="width" constant="222" id="tFB-p8-BZ5"/>
+                    </constraints>
+                    <state key="normal" title="Login with Fb">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SRu-O3-D1h">
+                    <rect key="frame" x="40" y="40" width="40" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-TD-Nci">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-GS-Kx7">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="78Q-af-cbW"/>
+                                        <constraint firstAttribute="width" constant="40" id="UVb-Up-BgV"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="close"/>
+                                    <connections>
+                                        <action selector="closeBtnClicked:" destination="-1" eventType="touchUpInside" id="0xR-c0-YN5"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="dIh-81-KFv"/>
+                        <constraint firstAttribute="width" constant="40" id="nK5-nS-zh5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vsq-h4-aGz" secondAttribute="bottom" constant="29" id="Kej-DI-7DZ"/>
+                <constraint firstItem="bbl-GS-Kx7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="NIZ-p4-IEf"/>
+                <constraint firstItem="MXS-nt-Psf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="212" id="RWV-kz-J1q"/>
+                <constraint firstItem="MXS-nt-Psf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="Tyu-nV-Oc9"/>
+                <constraint firstItem="SRu-O3-D1h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Zw3-4T-QbI"/>
+                <constraint firstItem="yuF-9b-sGH" firstAttribute="centerX" secondItem="Vsq-h4-aGz" secondAttribute="centerX" id="b2j-gB-J7h"/>
+                <constraint firstItem="yuF-9b-sGH" firstAttribute="top" secondItem="MXS-nt-Psf" secondAttribute="bottom" constant="41" id="oQs-Xd-TqS"/>
+                <constraint firstItem="yuF-9b-sGH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="obh-cD-c61"/>
+                <constraint firstItem="SRu-O3-D1h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rlv-F5-C39"/>
+                <constraint firstItem="bbl-GS-Kx7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="tbM-Xc-3Xo"/>
+            </constraints>
+            <point key="canvasLocation" x="146.5" y="-19.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="12" height="12"/>
+    </resources>
+</document>

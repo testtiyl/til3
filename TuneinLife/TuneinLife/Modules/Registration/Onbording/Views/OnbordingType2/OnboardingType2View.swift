@@ -25,7 +25,6 @@ class OnboardingType2View: UIView {
 
     @IBOutlet var fbView: UIView!
 
-    
     weak var delegate:OnboardingType2ViewDelegate?
     weak var fbButtonDelegate:FBLoginButtonDelegate?
     

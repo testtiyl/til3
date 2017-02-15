@@ -12,21 +12,7 @@ class GoalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        let button = CustomSquareButton(type: .system)
-        button.setTitle("Button", for: .normal)
-        view.addSubview(button)
-        
-        // Auto layout code using anchors (iOS9+)
-        // set witdh and height constraints if necessary
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let horizontalConstraint = button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let verticalConstraint = button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        let widthConstraint = button.widthAnchor.constraint(equalToConstant: 100)
-        let heightConstraint = button.heightAnchor.constraint(equalToConstant: 100)
-        NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
-        */
-        // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,15 +20,17 @@ class GoalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func goToFbLoginScreenClicked(_ sender: UIButton) {
+        
+        let loginVC :FbLoginViewController = FbLoginViewController(nibName:"FbLoginViewController" , bundle: nil)
+        
+            //UIViewController(nibName:"FbLoginViewController" , bundle: nil) as! FbLoginViewController
+        
+        loginVC.vcTitle = "new title"
+        
+        self.present(loginVC, animated: true, completion: nil)
+        
     }
-    */
 
 }
