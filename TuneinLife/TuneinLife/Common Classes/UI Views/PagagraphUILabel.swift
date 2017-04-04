@@ -6,7 +6,7 @@
 //  Copyright © 2017 Shyatoria. All rights reserved.
 //
 
- @IBDesignable
+ 
 import UIKit
 
 class PagagraphUILabel: UILabel {
@@ -25,5 +25,4 @@ class PagagraphUILabel: UILabel {
         font = UIConstants.default_paragraph_font
         
     }
-
 }
